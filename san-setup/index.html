@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAN Integration Setup — Google & Meta | Attrivo</title>
+    <meta name="description" content="Step-by-step guide to connect Google Ads and Meta campaigns with Attrivo for accurate marketing attribution. Configure auto-tagging, UTM parameters, and postback mappings.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://attrivo.in/san-setup/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Attrivo">
+    <meta property="og:url" content="https://attrivo.in/san-setup/">
+    <meta property="og:title" content="SAN Integration Setup — Google & Meta | Attrivo">
+    <meta property="og:description" content="Step-by-step guide to connect Google Ads and Meta campaigns with Attrivo for accurate marketing attribution. Configure auto-tagging, UTM parameters, and postback mappings.">
+    <meta property="og:image" content="https://attrivo.in/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SAN Integration Setup — Google & Meta | Attrivo">
+    <meta name="twitter:description" content="Step-by-step guide to connect Google Ads and Meta campaigns with Attrivo for accurate marketing attribution.">
+    <meta name="twitter:image" content="https://attrivo.in/og-image.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- FIXED NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="/"><img src="/Attrivo.svg" alt="Attrivo Logo" class="h-7 w-auto"></a>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="/" class="hover:text-blue-600 transition font-semibold">Home</a>
+                <a href="/san-setup" class="text-blue-600 transition font-semibold">SAN Integration</a>
+                <a href="/terms" class="hover:text-blue-600 transition font-semibold">Terms of Service</a>
+                <a href="/privacy" class="hover:text-blue-600 transition font-semibold">Privacy Policy</a>
+                <a href="/contact" class="hover:text-blue-600 transition font-semibold">Contact Us</a>
+            </nav>
+            <div>
+                <a href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium shadow-sm transition">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+                <!-- Page Header -->
+                <div class="border-b border-slate-200 pb-6">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-violet-100 rounded-xl flex items-center justify-center text-xl">🔌</div>
+                        <span class="text-xs font-bold text-violet-600 uppercase tracking-wider">Setup Guide</span>
+                    </div>
+                    <h1 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">SAN Integration Setup</h1>
+                    <p class="text-slate-500 mt-2 text-sm">Follow the steps below to connect your Self-Attributing Networks with the Attrivo dashboard for accurate attribution.</p>
+                </div>
+
+                <!-- ===== GOOGLE INTEGRATION ===== -->
+                <div class="space-y-8">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-xl flex items-center justify-center text-xl bg-blue-50">🔵</div>
+                        <h2 class="text-2xl font-extrabold text-slate-900">Google Integration</h2>
+                    </div>
+
+                    <!-- Attrivo Dashboard Setup -->
+                    <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 space-y-3">
+                        <h3 class="text-base font-bold text-blue-900">Attrivo Dashboard — What to Configure</h3>
+                        <ul class="text-sm text-blue-800 space-y-1.5 list-disc list-inside">
+                            <li><strong>Ad Account ID:</strong> Account from which your Google campaigns are live</li>
+                            <li><strong>Manager Account ID:</strong> Google MCC ID of your Sub Accounts</li>
+                            <li><strong>Access Token &amp; Refresh Token:</strong> Pulled automatically once you "Sign in with Google"</li>
+                        </ul>
+                        <p class="text-xs text-blue-700 font-semibold mt-2">Enable the Cost Integration toggle to receive cost data. Enable Postback Settings to send Install and Event postbacks to your Google Conversion Actions.</p>
+                        <div class="bg-white border border-blue-200 rounded-xl p-4 text-xs text-slate-600">
+                            <span class="font-bold text-slate-800 block mb-1">Note:</span>
+                            Ensure to Save Settings every time you make any change. Otherwise, updated data will not be reflected.
+                        </div>
+                    </div>
+
+                    <!-- Screenshot: Attrivo Google Dashboard -->
+                    <div class="rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                        <div class="bg-slate-100 px-4 py-2 border-b border-slate-200 flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                            <span class="ml-3 text-xs text-slate-500 font-medium">Attrivo Dashboard — SAN Integration (Google)</span>
+                        </div>
+                        <img src="img/screenshot-p1-1.png" alt="Attrivo Dashboard Google SAN Integration" class="w-full h-auto">
+                    </div>
+
+                    <!-- Current Setup Problem -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900">1. Current Setup — What's Happening Now</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Your Google Ads campaigns may be using internal tracking links as Final URLs:</p>
+                        <div class="bg-slate-900 rounded-xl p-4 text-xs font-mono text-emerald-400 overflow-x-auto">
+                            partner_id=iv_web&amp;la_code=PPIV&amp;d_id={'{'}adid{'}'}
+                        </div>
+                        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                            <p class="text-sm font-semibold text-amber-900">Result: Most paid traffic from Web Search campaigns is being reported as Organic.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold text-slate-800">Root Causes:</p>
+                            <ul class="text-sm text-slate-600 space-y-1.5 list-disc list-inside">
+                                <li>Auto-tagging may be OFF — so Google never appends <code class="bg-slate-100 px-1 rounded text-xs">gclid</code></li>
+                                <li>No UTM parameters in your ad URLs</li>
+                                <li>Internal tracking links do not carry Google attribution signals</li>
+                                <li>Some links redirect and strip the <code class="bg-slate-100 px-1 rounded text-xs">gclid</code> before reaching the landing page</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Recommended Setup Table -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900">2. Recommended Setup</h3>
+                        <div class="overflow-x-auto rounded-xl border border-slate-200">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="bg-slate-800 text-white">
+                                        <th class="px-4 py-3 text-left font-semibold w-8">#</th>
+                                        <th class="px-4 py-3 text-left font-semibold">What</th>
+                                        <th class="px-4 py-3 text-left font-semibold">Recommended Setup</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr class="bg-white">
+                                        <td class="px-4 py-3 text-slate-500">1</td>
+                                        <td class="px-4 py-3 font-medium text-slate-700">Add Final URL in Ad</td>
+                                        <td class="px-4 py-3 text-emerald-700 font-mono text-xs">https://www.example.com/landing-page/</td>
+                                    </tr>
+                                    <tr class="bg-slate-50">
+                                        <td class="px-4 py-3 text-slate-500">2</td>
+                                        <td class="px-4 py-3 font-medium text-slate-700">Auto-tagging</td>
+                                        <td class="px-4 py-3 text-emerald-700 font-semibold">Must be ON</td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="px-4 py-3 text-slate-500">3</td>
+                                        <td class="px-4 py-3 font-medium text-slate-700">Campaign URL Suffix</td>
+                                        <td class="px-4 py-3 text-emerald-700 font-mono text-xs break-all">utm_source=google&amp;utm_medium=cpc&amp;utm_campaign={'{'}campaignid{'}'}&amp;utm_term={'{'}keyword{'}'}&amp;utm_content={'{'}creative{'}'}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- What Changes After Implementation -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-slate-900">3. What Changes After Implementation</h3>
+                        <div class="overflow-x-auto rounded-xl border border-slate-200">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="bg-slate-800 text-white">
+                                        <th class="px-4 py-3 text-left font-semibold">Scenario</th>
+                                        <th class="px-4 py-3 text-left font-semibold">Current Setup</th>
+                                        <th class="px-4 py-3 text-left font-semibold">Recommended Setup</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr class="bg-slate-50">
+                                        <td class="px-4 py-3 font-semibold text-slate-700 text-xs uppercase tracking-wide" colspan="3">Click Tracking</td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="px-4 py-3 text-slate-600">User clicks Google Ad</td>
+                                        <td class="px-4 py-3 text-slate-500">Goes directly to website with no tracking</td>
+                                        <td class="px-4 py-3 text-emerald-700">Lands on destination with UTMs + GCLID attached</td>
+                                    </tr>
+                                    <tr class="bg-slate-50">
+                                        <td class="px-4 py-3 text-slate-600">Google attribution</td>
+                                        <td class="px-4 py-3 text-red-600">❌ Shows as Organic in most cases</td>
+                                        <td class="px-4 py-3 text-emerald-700">✅ Attributed to Google Ads via GCLID</td>
+                                    </tr>
+                                    <tr class="bg-white">
+                                        <td class="px-4 py-3 text-slate-600">Campaign details visible</td>
+                                        <td class="px-4 py-3 text-red-600">❌ Not available</td>
+                                        <td class="px-4 py-3 text-emerald-700">✅ Campaign, keyword, and ad creative level</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Step-by-Step Guide -->
+                    <div class="space-y-6">
+                        <h3 class="text-lg font-bold text-slate-900">4. Step-by-Step Implementation Guide</h3>
+
+                        <!-- Step 1 -->
+                        <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                            <div class="bg-blue-600 px-6 py-3 flex items-center space-x-3">
+                                <span class="w-6 h-6 bg-white text-blue-600 rounded-full flex items-center justify-center text-xs font-black">1</span>
+                                <h4 class="text-white font-bold text-sm">Turn ON Auto-tagging in Google Ads</h4>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Navigate to:</p>
+                                <ol class="text-sm text-slate-600 space-y-1.5 list-decimal list-inside">
+                                    <li>Google Ads</li>
+                                    <li>Admin → Account Settings</li>
+                                    <li>Auto-tagging</li>
+                                    <li>Toggle to <strong>ON</strong></li>
+                                    <li>Save</li>
+                                </ol>
+                                <!-- Screenshot -->
+                                <div class="rounded-xl border border-slate-200 overflow-hidden mt-4">
+                                    <div class="bg-slate-100 px-4 py-2 border-b border-slate-200 flex items-center space-x-2">
+                                        <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                        <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                                        <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                                        <span class="ml-3 text-xs text-slate-500 font-medium">Google Ads — Admin → Account Settings → Auto-tagging</span>
+                                    </div>
+                                    <img src="img/screenshot-p4-1.png" alt="Google Ads Auto-tagging Setting" class="w-full h-auto">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                            <div class="bg-blue-600 px-6 py-3 flex items-center space-x-3">
+                                <span class="w-6 h-6 bg-white text-blue-600 rounded-full flex items-center justify-center text-xs font-black">2</span>
+                                <h4 class="text-white font-bold text-sm">Add Campaign URL Suffix</h4>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Navigate to:</p>
+                                <ol class="text-sm text-slate-600 space-y-1.5 list-decimal list-inside">
+                                    <li>Google Ads</li>
+                                    <li>Campaigns</li>
+                                    <li>Click on your Campaign name</li>
+                                    <li>Settings</li>
+                                    <li>Scroll to <strong>'Campaign URL options'</strong></li>
+                                    <li>Final URL suffix field — enter the following:</li>
+                                </ol>
+                                <div class="bg-slate-900 rounded-xl p-4 text-xs font-mono text-emerald-400 overflow-x-auto">
+                                    utm_source=google&amp;utm_medium=cpc&amp;utm_campaign={'{'}campaignid{'}'}&amp;utm_term={'{'}keyword{'}'}&amp;utm_content={'{'}creative{'}'}
+                                </div>
+                                <p class="text-xs text-slate-500">Google's dynamic parameters (<code class="bg-slate-100 px-1 rounded">{'{'}campaignid{'}'}</code>, <code class="bg-slate-100 px-1 rounded">{'{'}keyword{'}'}</code>, <code class="bg-slate-100 px-1 rounded">{'{'}creative{'}'}</code>) fill in automatically — no manual updates needed per campaign.</p>
+                                <!-- Screenshot -->
+                                <div class="rounded-xl border border-slate-200 overflow-hidden mt-4">
+                                    <div class="bg-slate-100 px-4 py-2 border-b border-slate-200 flex items-center space-x-2">
+                                        <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                        <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                                        <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                                        <span class="ml-3 text-xs text-slate-500 font-medium">Google Ads — Campaigns → Settings → Campaign URL options</span>
+                                    </div>
+                                    <img src="img/screenshot-p5-1.png" alt="Google Ads Campaign URL Suffix" class="w-full h-auto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t-2 border-slate-100"></div>
+
+                <!-- ===== META INTEGRATION ===== -->
+                <div class="space-y-8">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-xl flex items-center justify-center text-xl bg-blue-100">📘</div>
+                        <h2 class="text-2xl font-extrabold text-slate-900">Meta Integration</h2>
+                    </div>
+
+                    <!-- Attrivo Dashboard Setup -->
+                    <div class="bg-indigo-50 border border-indigo-100 rounded-2xl p-6 space-y-3">
+                        <h3 class="text-base font-bold text-indigo-900">Attrivo Dashboard — What to Configure</h3>
+                        <ul class="text-sm text-indigo-800 space-y-1.5 list-disc list-inside">
+                            <li><strong>Ad Account ID:</strong> Account from which your Meta campaigns are live</li>
+                            <li><strong>Data Set ID:</strong> Facebook Ads → Events Manager → Datasets → Select Dataset ID of App</li>
+                            <li><strong>Decryption Key:</strong> Developer Account → Select App → Basic Settings → Decryption Key</li>
+                            <li><strong>Access Token:</strong> Facebook Ads → Events Manager → Datasets → Select Specific Dataset ID → Settings → Generate Access Token</li>
+                        </ul>
+                        <div class="bg-white border border-indigo-200 rounded-xl p-4 text-xs text-slate-600">
+                            <span class="font-bold text-slate-800 block mb-1">Note:</span>
+                            Ensure to Save Settings every time you make any change. Otherwise, updated data will not be reflected.
+                        </div>
+                    </div>
+
+                    <!-- Screenshot: Attrivo Meta Dashboard -->
+                    <div class="rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                        <div class="bg-slate-100 px-4 py-2 border-b border-slate-200 flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                            <span class="ml-3 text-xs text-slate-500 font-medium">Attrivo Dashboard — SAN Integration (Meta)</span>
+                        </div>
+                        <img src="img/screenshot-p6-1.png" alt="Attrivo Dashboard Meta SAN Integration" class="w-full h-auto">
+                    </div>
+
+                    <!-- Retrieve Data Set ID -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                        <div class="bg-indigo-600 px-6 py-3 flex items-center space-x-3">
+                            <span class="w-6 h-6 bg-white text-indigo-600 rounded-full flex items-center justify-center text-xs font-black">1</span>
+                            <h4 class="text-white font-bold text-sm">Retrieve: Data Set ID</h4>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Steps:</p>
+                            <ol class="text-sm text-slate-600 space-y-1.5 list-decimal list-inside">
+                                <li>Meta Ads Account</li>
+                                <li>Events Manager (Left Menu)</li>
+                                <li>Select Data Sets (App from which campaigns are live)</li>
+                                <li>Select Data Set ID</li>
+                            </ol>
+                            <!-- Screenshot -->
+                            <div class="rounded-xl border border-slate-200 overflow-hidden mt-4">
+                                <div class="bg-slate-100 px-4 py-2 border-b border-slate-200 flex items-center space-x-2">
+                                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                                    <span class="ml-3 text-xs text-slate-500 font-medium">Meta Ads — Events Manager → Datasets</span>
+                                </div>
+                                <img src="img/screenshot-p7-1.png" alt="Meta Events Manager Datasets - Data Set ID" class="w-full h-auto">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Retrieve Decryption Key -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                        <div class="bg-indigo-600 px-6 py-3 flex items-center space-x-3">
+                            <span class="w-6 h-6 bg-white text-indigo-600 rounded-full flex items-center justify-center text-xs font-black">2</span>
+                            <h4 class="text-white font-bold text-sm">Retrieve: Decryption Key</h4>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Steps:</p>
+                            <ol class="text-sm text-slate-600 space-y-1.5 list-decimal list-inside">
+                                <li>Meta Developer Account</li>
+                                <li>Select App</li>
+                                <li>Go to Basic Settings and scroll down to <strong>"Decryption Key"</strong></li>
+                            </ol>
+                            <!-- Screenshot -->
+                            <div class="rounded-xl border border-slate-200 overflow-hidden mt-4">
+                                <div class="bg-slate-100 px-4 py-2 border-b border-slate-200 flex items-center space-x-2">
+                                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                                    <span class="ml-3 text-xs text-slate-500 font-medium">Meta Developer Account — Basic Settings → Decryption Key</span>
+                                </div>
+                                <img src="img/screenshot-p7-2.png" alt="Meta Developer Account Decryption Key" class="w-full h-auto">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Retrieve Access Token -->
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                        <div class="bg-indigo-600 px-6 py-3 flex items-center space-x-3">
+                            <span class="w-6 h-6 bg-white text-indigo-600 rounded-full flex items-center justify-center text-xs font-black">3</span>
+                            <h4 class="text-white font-bold text-sm">Retrieve: Access Token</h4>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Steps:</p>
+                            <ol class="text-sm text-slate-600 space-y-1.5 list-decimal list-inside">
+                                <li>Meta Ads Account</li>
+                                <li>Events Manager (Left Menu)</li>
+                                <li>Select Data Set ID (App from which campaigns are live)</li>
+                                <li>Select <strong>Settings</strong> tab</li>
+                                <li>Scroll down and click <strong>"Generate access token"</strong></li>
+                            </ol>
+                            <!-- Screenshot -->
+                            <div class="rounded-xl border border-slate-200 overflow-hidden mt-4">
+                                <div class="bg-slate-100 px-4 py-2 border-b border-slate-200 flex items-center space-x-2">
+                                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                                    <span class="ml-3 text-xs text-slate-500 font-medium">Meta Events Manager — Dataset Settings → Generate Access Token</span>
+                                </div>
+                                <img src="img/screenshot-p8-1.png" alt="Meta Generate Access Token" class="w-full h-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back link -->
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="/" class="text-sm font-semibold text-slate-500 hover:text-blue-600 transition">← Back to Home</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="flex justify-center">
+                <a href="/"><img src="/Attrivo.svg" alt="Attrivo Logo" class="h-8 w-auto brightness-0 invert opacity-80"></a>
+            </div>
+            <p class="text-sm max-w-md mx-auto">Next-generation attribution &amp; analytics solutions, built for growth marketers.</p>
+            <div class="flex flex-wrap justify-center gap-6 text-xs font-medium text-slate-500">
+                <a href="/" class="hover:text-slate-300 transition">Home</a>
+                <a href="/terms" class="hover:text-slate-300 transition">Terms of Service</a>
+                <a href="/privacy" class="hover:text-slate-300 transition">Privacy Policy</a>
+                <a href="/contact" class="hover:text-slate-300 transition">Contact Us</a>
+            </div>
+            <div class="text-xs text-slate-700 pt-6 border-t border-slate-900">
+                &copy; 2026 Attrivo Intelligence Private Limited. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
