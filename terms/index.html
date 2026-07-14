@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service | Attrivo</title>
-    <meta name="description" content="Attrivo Terms of Service — governing the use of our marketing attribution platform, tracking APIs, and anti-fraud monitoring infrastructure.">
+    <meta name="description" content="Attrivo Terms of Service — governing the use of our marketing attribution platform, analytics, audience segmentation, and customer engagement modules.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://attrivo.in/terms/">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -14,13 +14,13 @@
     <meta property="og:site_name" content="Attrivo">
     <meta property="og:url" content="https://attrivo.in/terms/">
     <meta property="og:title" content="Terms of Service | Attrivo">
-    <meta property="og:description" content="Governing the use of our marketing attribution platform, tracking APIs, and anti-fraud monitoring infrastructure.">
+    <meta property="og:description" content="Governing the use of our marketing attribution platform, analytics, audience segmentation, and customer engagement modules.">
     <meta property="og:image" content="https://attrivo.in/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Terms of Service | Attrivo">
-    <meta name="twitter:description" content="Governing the use of our marketing attribution platform, tracking APIs, and anti-fraud monitoring infrastructure.">
+    <meta name="twitter:description" content="Governing the use of our marketing attribution platform, analytics, audience segmentation, and customer engagement modules.">
     <meta name="twitter:image" content="https://attrivo.in/og-image.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>html { scroll-behavior: smooth; }</style>
@@ -37,10 +37,10 @@
                 <a href="/san-setup" class="hover:text-blue-600 transition">SAN Integration</a>
                 <a href="/terms" class="text-blue-600 transition">Terms of Service</a>
                 <a href="/privacy" class="hover:text-blue-600 transition">Privacy Policy</a>
-                <a href="/#contact" class="hover:text-blue-600 transition">Contact Us</a>
+                <a href="/contact" class="hover:text-blue-600 transition">Contact Us</a>
             </nav>
             <div>
-                <a href="/#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium shadow-sm transition">Get Started</a>
+                <a href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium shadow-sm transition">Get Started</a>
             </div>
         </div>
     </header>
@@ -51,265 +51,181 @@
 
                 <div class="border-b border-slate-200 pb-6">
                     <h1 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Terms of Service</h1>
-                    <p class="text-sm text-slate-500 mt-2">Effective 3rd April 2026</p>
+                    <p class="text-sm text-slate-500 mt-2">Last updated: June 2026</p>
                 </div>
 
-                <div class="text-slate-600 leading-relaxed space-y-2">
-                    <p>These Terms of Service ("Agreement" or "Terms") constitute a legally binding agreement between Attrivo Intelligence Private Limited ("Attrivo," "we," "our," or "us") and the entity or individual ("Customer," "you," or "your") accessing or using Attrivo's mobile attribution, analytics, and marketing intelligence platform (the "Services"). By accessing the Services, executing an Order Form, or clicking to accept these Terms, you agree to be bound by this Agreement.</p>
-                    <p class="font-semibold text-slate-700 uppercase text-sm">IF YOU ARE ENTERING INTO THIS AGREEMENT ON BEHALF OF A COMPANY OR OTHER LEGAL ENTITY, YOU REPRESENT THAT YOU HAVE THE AUTHORITY TO BIND SUCH ENTITY TO THESE TERMS. IF YOU DO NOT HAVE SUCH AUTHORITY, OR DO NOT AGREE TO THESE TERMS, YOU MAY NOT USE THE SERVICES.</p>
+                <div class="text-slate-600 leading-relaxed space-y-3">
+                    <p>These Terms of Service (the "Agreement") are entered into between <strong class="text-slate-800">Attrivo Intelligence Private Limited</strong>, a company having its registered office in Bangalore, Karnataka, India ("Attrivo," "we," "us," or "our"), and the entity or individual accepting this Agreement ("Customer," "you," or "your"). This Agreement, together with any order form, statement of work, or plan details confirmed at signup (an "Order"), governs Customer's access to and use of the Attrivo platform, including its attribution, analytics, audience segmentation, cross-platform customer journey measurement, and customer engagement (including push notification) modules, our dashboard, SDKs, and APIs (collectively, the "Services"). By creating an account, accepting an Order, or accessing or using the Services, you agree to be bound by this Agreement on behalf of yourself and, if applicable, the organization you represent.</p>
                 </div>
 
                 <!-- Section 1 -->
                 <div class="space-y-4">
                     <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">1. Definitions</h2>
                     <div class="space-y-3 text-slate-600 leading-relaxed">
-                        <p><span class="font-semibold text-slate-800">"Affiliate"</span> means any entity that controls, is controlled by, or is under common control with the applicable party.</p>
-                        <p><span class="font-semibold text-slate-800">"Attribution Data"</span> means data generated through the Services that identifies or attributes a user action, conversion, or event to a specific marketing channel or campaign.</p>
-                        <p><span class="font-semibold text-slate-800">"Authorized User"</span> means an employee or contractor of Customer who is authorized by Customer to access the Services under Customer's account.</p>
-                        <p><span class="font-semibold text-slate-800">"Confidential Information"</span> means any non-public, proprietary, or sensitive information disclosed by one party to the other under this Agreement that is marked as confidential or that a reasonable party would understand to be confidential.</p>
-                        <p><span class="font-semibold text-slate-800">"Customer Data"</span> means data, content, or materials that Customer or its Authorized Users submit to the Services, including data transmitted through Attrivo's SDKs, APIs, or integrations.</p>
-                        <p><span class="font-semibold text-slate-800">"Documentation"</span> means the technical documentation, user guides, and specifications published by Attrivo related to the Services.</p>
-                        <p><span class="font-semibold text-slate-800">"Order Form"</span> means any written or electronic order, statement of work, or subscription form executed between the parties that incorporates these Terms.</p>
-                        <p><span class="font-semibold text-slate-800">"Platform"</span> means Attrivo's proprietary software platform, dashboard, APIs, SDKs, and associated tools made available as part of the Services.</p>
-                        <p><span class="font-semibold text-slate-800">"Services"</span> means Attrivo's marketing attribution, analytics, measurement, and reporting services, as described in the applicable Order Form and Documentation.</p>
-                        <p><span class="font-semibold text-slate-800">"Subscription Term"</span> means the period of time during which Customer is authorized to use the Services, as set forth in the Order Form.</p>
+                        <p><span class="font-semibold text-slate-800">"Authorized User"</span> means an employee, agency, or contractor of Customer who is permitted by Customer to access the Services on Customer's behalf.</p>
+                        <p><span class="font-semibold text-slate-800">"Customer Data"</span> means data that Customer or its Authorized Users submit to, or that is collected through, the Services in connection with Customer's own end users, including attribution events, device and advertising identifiers, in-app and web behavioural events, and segmentation outputs.</p>
+                        <p><span class="font-semibold text-slate-800">"End User"</span> means an individual who interacts with Customer's website, mobile application, or other digital property in which the Attrivo SDK or tracking mechanisms are implemented.</p>
+                        <p><span class="font-semibold text-slate-800">"SDK"</span> means the software development kit, tag, pixel, or similar integration code provided by Attrivo for implementation on Customer's web or app properties.</p>
+                        <p><span class="font-semibold text-slate-800">"Personal Data"</span> has the meaning given to it (or to the equivalent term "personal information") under applicable data protection law, including the Digital Personal Data Protection Act, 2023 of India ("DPDP Act") and, where applicable, the EU/UK General Data Protection Regulation ("GDPR").</p>
                     </div>
                 </div>
 
                 <!-- Section 2 -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">2. Access to Services</h2>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">2.1 License Grant</h3>
-                            <p>Subject to Customer's compliance with this Agreement and timely payment of applicable fees, Attrivo grants Customer a limited, non-exclusive, non-transferable, non-sublicensable license during the Subscription Term to access and use the Services solely for Customer's internal business purposes.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">2.2 Authorized Users</h3>
-                            <p>Customer may authorize its employees and contractors to access the Services as Authorized Users. Customer is responsible for: (a) ensuring Authorized Users comply with this Agreement; (b) managing and revoking user access promptly when no longer appropriate; and (c) maintaining the confidentiality of login credentials. Customer is liable for all actions taken through its account.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-2">2.3 Restrictions</h3>
-                            <p class="mb-2">Customer shall not, and shall not permit any third party to:</p>
-                            <ul class="list-disc list-inside space-y-1 ml-2">
-                                <li>License, sublicense, sell, resell, transfer, assign, or otherwise commercialize the Services to any third party</li>
-                                <li>Reverse engineer, decompile, disassemble, or attempt to derive source code from the Platform</li>
-                                <li>Modify, adapt, or create derivative works based on the Services</li>
-                                <li>Use the Services to develop a competing product or service</li>
-                                <li>Circumvent or disable any security, usage monitoring, or access control mechanisms</li>
-                                <li>Use the Services to process data in violation of applicable law or in a manner that infringes third-party rights</li>
-                                <li>Introduce malicious code, viruses, or disruptive technologies into the Platform</li>
-                                <li>Access the Services by any means other than through Attrivo's authorized interfaces</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">2. Eligibility and Accounts</h2>
+                    <p class="text-slate-600 leading-relaxed">You must be at least 18 years old and have the authority to bind your organization to use the Services. You agree to provide accurate registration information, keep it current, and keep your account credentials confidential. You are responsible for all activity occurring under your account, whether or not authorized by you, except to the extent such activity results from our breach of this Agreement.</p>
                 </div>
 
                 <!-- Section 3 -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">3. Customer Data and Responsibilities</h2>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">3.1 Ownership of Customer Data</h3>
-                            <p>As between the parties, Customer retains all ownership rights in and to Customer Data. Customer grants Attrivo a limited, non-exclusive license to use, process, and transmit Customer Data solely as necessary to provide the Services.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">3.2 Customer Warranties</h3>
-                            <p>Customer represents and warrants that: (a) Customer has the right and authority to submit Customer Data to the Services; (b) Customer Data and its use in connection with the Services will not violate any applicable law, regulation, or third-party rights; (c) Customer will obtain all necessary consents from end users for Attrivo to process data on Customer's behalf; and (d) Customer has implemented and maintains a lawful privacy policy covering its collection and use of user data.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">3.3 Prohibited Data</h3>
-                            <p>Customer shall not submit to the Services any data that: (a) constitutes sensitive personal data (such as health, financial, or biometric data) unless expressly authorized in writing by Attrivo; (b) relates to children under the age of 13 (or the applicable age of digital consent in relevant jurisdictions); (c) Customer does not have the right to transmit; or (d) is subject to heightened legal protections that would impose obligations on Attrivo beyond those agreed in this Agreement.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">3.4 Data Processing</h3>
-                            <p>To the extent Attrivo processes personal data on behalf of Customer in connection with the Services, the parties shall execute a separate Data Processing Agreement ("DPA"), the terms of which are incorporated herein by reference. In the event of conflict between the DPA and these Terms on data privacy matters, the DPA shall govern.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">3.5 Third-Party API Integrations and Ad Networks</h3>
-                            <div class="space-y-2">
-                                <p><span class="font-medium text-slate-700">(a) Data Access &amp; Integration:</span> To provide certain attribution, marketing intelligence, and performance tracking features, the Services allow you to integrate your account with third-party advertising, analytics, and cloud networks via API or Token Authentication (OAuth). When you authorize the Platform to access these third-party accounts, we may ingest specific campaign performance metrics, including but not limited to clicks, impressions, ad spend, cost, and conversion data ("Integration Data"). Attrivo processes this Integration Data solely to calculate marketing attribution, generate performance analytics, and populate your internal account dashboards.</p>
-                                <p><span class="font-medium text-slate-700">(b) Compliance with Platform Developer Policies:</span> Attrivo's collection, use, processing, and transfer of Integration Data strictly adheres to the respective third-party platform's developer policies, API terms of service, and user data protection requirements—including any applicable "Limited Use" or restricted data handling policies enforced by the provider of the integrated platform.</p>
-                                <p><span class="font-medium text-slate-700">(c) Usage &amp; Sharing Restrictions:</span> Integration Data is used exclusively for the benefit of the specific Customer account that authorized the connection. Attrivo will not use Integration Data to serve or target advertisements, target individuals, or train generalized machine learning, deep learning, or artificial intelligence models. We do not sell, lease, or share Integration Data with third-party data brokers, advertising networks, or unauthorized external entities.</p>
-                                <p><span class="font-medium text-slate-700">(d) Access Revocation and Disconnection:</span> You may disconnect or revoke Attrivo's access to your third-party API accounts at any time via the integration management settings within the Platform dashboard or through your respective third-party provider's account security settings page. Upon disconnection, Attrivo will immediately cease fetching new performance metrics and will delete or de-identify stored Integration Data in accordance with Section 10.3 of these Terms.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">3. The Services</h2>
+                    <p class="text-slate-600 leading-relaxed">The Services give Customer a unified, first-party view of its own End Users by combining marketing attribution, product and behavioural analytics, audience segmentation, and cross-platform customer journey measurement — including web-to-app and app-to-web journeys — with multi-channel engagement capabilities, including push notifications, under a single integration. We will provide the Services with reasonable skill and care, consistent with the functionality described on our website, our documentation, and any applicable Order.</p>
+                    <p class="text-slate-600 leading-relaxed">We may modify, improve, or retire features of the Services from time to time. If a change materially reduces the core functionality Customer has subscribed to under an active Order, we will provide Customer with reasonable advance notice.</p>
+                    <p class="text-slate-600 leading-relaxed">We may temporarily suspend the Services for scheduled maintenance, emergency security work, or to address a suspected violation of this Agreement, and will provide advance notice where reasonably possible except where the risk requires immediate action.</p>
                 </div>
 
                 <!-- Section 4 -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">4. Fees and Payment</h2>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">4.1 Subscription Fees</h3>
-                            <p>Customer agrees to pay all fees set forth in the applicable Order Form. Fees are due and payable in accordance with the billing schedule stated in the Order Form, or if not specified, within thirty (30) days of invoice.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">4.2 Invoicing and Taxes</h3>
-                            <p>All fees are stated exclusive of taxes. Customer is responsible for all applicable taxes, levies, or duties arising from this Agreement under applicable Indian tax regulations (including GST), excluding taxes on Attrivo's net income. If Customer is required by law to withhold any taxes, Customer shall gross up payments so that Attrivo receives the full amount stated in the Order Form.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">4.3 Late Payments</h3>
-                            <p>Overdue amounts will accrue interest at the lesser of 1.5% per month or the maximum rate permitted by law. If Customer's account remains past due for more than thirty (30) days, Attrivo reserves the right to suspend access to the Services upon written notice.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">4.4 Fee Adjustments</h3>
-                            <p>Attrivo may adjust fees at the start of any renewal Subscription Term by providing at least sixty (60) days' prior written notice. Continued use of the Services after the new fees take effect constitutes Customer's acceptance.</p>
-                        </div>
-                    </div>
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">4. Trials and Free Access</h2>
+                    <p class="text-slate-600 leading-relaxed">We may, at our discretion, offer a free trial or a limited free tier of the Services for a defined period or usage volume (a "Trial"). A Trial automatically ends when its time or volume limit is reached, or earlier if either party terminates it. Either party may end a Trial at any time without liability to the other. Services provided under a Trial are offered "as is," without the warranties set out in Section 12, except where such exclusion is not permitted by law or in cases of our willful default.</p>
                 </div>
 
                 <!-- Section 5 -->
                 <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">5. Confidentiality</h2>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">5.1 Obligations</h3>
-                            <p>Each party agrees to: (a) maintain the other party's Confidential Information in strict confidence; (b) use Confidential Information only for purposes of performing its obligations or exercising its rights under this Agreement; and (c) disclose Confidential Information only to employees or contractors who have a need to know and are bound by comparable confidentiality obligations.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">5.2 Exceptions</h3>
-                            <p>Confidentiality obligations do not apply to information that: (a) is or becomes publicly available through no fault of the receiving party; (b) was already known to the receiving party at the time of disclosure; (c) is independently developed without use of the other party's Confidential Information; or (d) is required to be disclosed by applicable law or court order, provided the receiving party gives prompt notice and cooperates in seeking a protective order.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">5.3 Injunctive Relief</h3>
-                            <p>The parties acknowledge that breach of confidentiality obligations may cause irreparable harm for which monetary damages are inadequate. Each party shall be entitled to seek equitable relief, including injunction, without the need to post bond.</p>
-                        </div>
-                    </div>
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">5. Customer's Use of the Services</h2>
+                    <p class="text-slate-600 leading-relaxed">Customer agrees to:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-2 text-slate-600 leading-relaxed">
+                        <li>implement the Attrivo SDK, tags, and any updates we reasonably require within a commercially reasonable time of notice, particularly where the update addresses a security or compliance issue;</li>
+                        <li>follow our published integration and implementation guidelines;</li>
+                        <li>obtain all consents, present all notices, and honour all End User rights required under applicable data protection and e-privacy law before collecting any End User data through the Services, including for the collection of device or advertising identifiers, cross-app tracking, and the sending of push notifications;</li>
+                        <li>configure and use the Services in a manner consistent with the platform policies of any relevant app store or operating system provider (including consent frameworks such as Apple's App Tracking Transparency and equivalent Android requirements); and</li>
+                        <li>not use the Services to process special categories of personal data (such as health, biometric, precise geolocation used for sensitive inferences, or financial account data) unless expressly agreed with us in writing and subject to any additional safeguards we may require.</li>
+                    </ul>
+                    <p class="text-slate-600 leading-relaxed">Customer must not: resell, sublicense, or provide the Services to any third party outside its own organization, agencies, or affiliates without our prior written consent; use the Services to send unsolicited communications in violation of applicable anti-spam, telecom, or do-not-disturb regulations; attempt to reverse-engineer, decompile, or extract the underlying source code of the Services; or use the Services in a manner that could disable, overburden, or impair our infrastructure or that of our other customers.</p>
+                    <p class="text-slate-600 leading-relaxed">Customer may permit Authorized Users to access its account and remains responsible for their compliance with this Agreement as if their acts and omissions were its own.</p>
                 </div>
 
                 <!-- Section 6 -->
                 <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">6. Intellectual Property</h2>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">6.1 Attrivo IP</h3>
-                            <p>Attrivo owns all right, title, and interest in and to the Services, Platform, Documentation, algorithms, models, software, and all underlying technology and intellectual property, including any improvements or modifications thereto. No rights are granted to Customer except as expressly stated in this Agreement.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">6.2 Feedback</h3>
-                            <p>If Customer provides feedback, suggestions, or ideas regarding the Services ("Feedback"), Customer hereby grants Attrivo a perpetual, irrevocable, royalty-free license to use such Feedback without restriction. Attrivo has no obligation to act on Feedback.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">6.3 Aggregate and Anonymized Data</h3>
-                            <p>Subject to the strict platform limitations on Integration Data outlined in Section 3.5, Attrivo may compile and use aggregated, anonymized, or de-identified data derived from the Services — in a manner that does not identify Customer or any individual — to improve the Services, develop benchmarks, and publish industry insights. This right survives termination of the Agreement.</p>
-                        </div>
-                    </div>
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">6. Data Protection and Privacy</h2>
+                    <p class="text-slate-600 leading-relaxed">Attrivo processes Customer Data as a processor/data fiduciary's service provider (as those roles are understood under the DPDP Act and, where applicable, GDPR), acting on Customer's documented instructions as set out in this Agreement and any applicable Order. Where required by applicable law, the parties will enter into a data processing addendum, which will form part of this Agreement upon execution.</p>
+                    <p class="text-slate-600 leading-relaxed">Customer is solely responsible for: (a) determining the lawful basis for, and obtaining, any consent required from End Users prior to data collection through the Services; (b) responding to End User requests to exercise their data protection rights, including access, correction, and erasure requests, with our reasonable technical assistance; and (c) ensuring its own privacy notices accurately describe its use of the Services.</p>
+                    <p class="text-slate-600 leading-relaxed">We will implement and maintain appropriate technical and organizational security measures designed to protect Customer Data against unauthorized access, loss, or disclosure. If we become aware of a confirmed breach of security leading to the unauthorized disclosure of Customer Data, we will notify Customer without undue delay and provide reasonably available information to help Customer meet its own regulatory notification obligations.</p>
                 </div>
 
                 <!-- Section 7 -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">7. Representations and Warranties</h2>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">7.1 Attrivo Warranties</h3>
-                            <p>Attrivo represents and warrants that: (a) the Services will perform materially in accordance with the applicable Documentation; (b) Attrivo will implement and maintain industry-standard security measures to protect Customer Data; and (c) Attrivo has the authority to enter into this Agreement and that the Services do not infringe any third-party intellectual property rights.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">7.2 Customer Warranties</h3>
-                            <p>Customer represents and warrants that: (a) it has full legal authority to enter into this Agreement; (b) its use of the Services will comply with all applicable laws and regulations; and (c) Customer Data does not violate any third-party rights.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">7.3 Disclaimer</h3>
-                            <p class="uppercase text-sm font-medium">EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE SERVICES AND PLATFORM ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. ATTRIVO EXPRESSLY DISCLAIMS ALL OTHER WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. ATTRIVO DOES NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR COMPLETELY SECURE.</p>
-                        </div>
-                    </div>
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">7. Engagement and Push Notification Compliance</h2>
+                    <p class="text-slate-600 leading-relaxed">Where Customer uses the Services to send push notifications or other engagement messages to End Users, Customer is solely responsible for ensuring that such messages comply with applicable telecommunications, commercial-messaging, and do-not-disturb regulations, and that End Users have a functioning mechanism to opt out of further messages. We will provide the technical means to honour opt-out requests submitted through our platform, but Customer remains responsible for the content, targeting, frequency, and lawful basis of each message it sends.</p>
                 </div>
 
                 <!-- Section 8 -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">8. Indemnification</h2>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">8.1 By Attrivo</h3>
-                            <p>Attrivo will defend, indemnify, and hold Customer harmless from and against third-party claims alleging that the Services, as used in accordance with this Agreement, infringe any patent, copyright, trademark, or trade secret. Attrivo's obligations under this section are conditioned on Customer: (a) providing prompt written notice; (b) granting Attrivo sole control of the defense; and (c) reasonably cooperating in the defense.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">8.2 By Customer</h3>
-                            <p>Customer will defend, indemnify, and hold Attrivo harmless from and against any claims, damages, or expenses arising from: (a) Customer's breach of this Agreement; (b) Customer Data submitted to the Services; (c) Customer's violation of applicable law; or (d) claims by Customer's end users arising from Customer's use of the Services.</p>
-                        </div>
-                    </div>
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">8. Fees and Payment</h2>
+                    <p class="text-slate-600 leading-relaxed">Fees for the Services are as set out in the applicable Order. Unless stated otherwise, fees are billed in advance on a monthly or annual basis and are non-refundable once a billing period has started. We may revise our pricing for future billing periods with at least 30 days' written notice. All fees are exclusive of applicable taxes, which Customer is responsible for unless Customer provides a valid exemption certificate. We may suspend the Services following reasonable notice in the event of a late or failed payment that remains uncured.</p>
                 </div>
 
                 <!-- Section 9 -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">9. Limitation of Liability</h2>
-                    <div class="space-y-3 text-slate-600 leading-relaxed">
-                        <p class="uppercase text-sm font-medium">TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW: (a) NEITHER PARTY SHALL BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES; AND (b) EACH PARTY'S TOTAL CUMULATIVE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT SHALL NOT EXCEED THE TOTAL FEES PAID OR PAYABLE BY CUSTOMER IN THE TWELVE (12) MONTHS PRECEDING THE EVENT GIVING RISE TO THE CLAIM.</p>
-                        <p>The above limitations shall not apply to: (i) Customer's payment obligations; (ii) either party's indemnification obligations; (iii) damages arising from gross negligence or willful misconduct; or (iv) damages arising from breach of confidentiality obligations.</p>
-                    </div>
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">9. Ownership and Data Rights</h2>
+                    <p class="text-slate-600 leading-relaxed">We retain all right, title, and interest in the Services, including our software, dashboards, documentation, models, and any underlying technology, methodologies, and improvements, whether or not developed specifically for Customer. Nothing in this Agreement transfers any such rights to Customer beyond the limited right described in Section 10.</p>
+                    <p class="text-slate-600 leading-relaxed">Customer retains all right, title, and interest in Customer Data, including End User data it has lawfully collected and any reports or exports derived from it. Customer grants us a limited right to host, process, transmit, and display Customer Data solely to provide and support the Services. We may use aggregated and anonymized data that cannot reasonably be used to identify any individual, device, or Customer to improve our products, benchmark performance, and develop new features.</p>
                 </div>
 
                 <!-- Section 10 -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">10. Term and Termination</h2>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">10.1 Term</h3>
-                            <p>This Agreement commences on the Effective Date and continues for the Subscription Term set forth in the applicable Order Form. Unless either party provides written notice of non-renewal at least sixty (60) days prior to expiration, the Subscription Term will automatically renew for successive periods equal to the then-current Subscription Term.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">10.2 Termination for Cause</h3>
-                            <p>Either party may terminate this Agreement upon written notice if the other party: (a) materially breaches this Agreement and fails to cure such breach within thirty (30) days of written notice; or (b) becomes the subject of insolvency, receivership, or bankruptcy proceedings.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">10.3 Effect of Termination</h3>
-                            <p>Upon expiration or termination: (a) all licenses granted hereunder immediately terminate; (b) Customer must cease all use of the Services; (c) each party will promptly return or destroy the other's Confidential Information upon request; and (d) Customer may retrieve Customer Data in standard export formats for up to thirty (30) days following termination, after which Attrivo may delete such data.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">10.4 Survival</h3>
-                            <p>Sections relating to Definitions, Fees (to the extent unpaid), Confidentiality, Intellectual Property, Limitation of Liability, Indemnification, and General Provisions shall survive termination of this Agreement.</p>
-                        </div>
-                    </div>
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">10. License Grant</h2>
+                    <p class="text-slate-600 leading-relaxed">Subject to this Agreement and timely payment of applicable fees, we grant Customer a non-exclusive, non-transferable, non-sublicensable, limited right to access and use the Services during the term of the applicable Order, solely for Customer's own internal business purposes.</p>
                 </div>
 
                 <!-- Section 11 -->
-                <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">11. Suspension</h2>
-                    <p class="text-slate-600 leading-relaxed">Attrivo reserves the right to suspend Customer's access to the Services, with prior notice where feasible, if: (a) Customer's account is past due; (b) Attrivo reasonably believes Customer is using the Services in violation of applicable law or these Terms; or (c) the Services are being used in a manner that poses a security or technical risk to Attrivo or other customers. Attrivo will restore access promptly once the underlying issue is resolved.</p>
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">11. Confidentiality</h2>
+                    <p class="text-slate-600 leading-relaxed">Each party may receive confidential or proprietary information of the other party in connection with this Agreement. Each party agrees to use the other's confidential information solely to perform its obligations under this Agreement, to protect it with at least the same degree of care it uses to protect its own confidential information of similar importance, and not to disclose it to third parties except to employees, contractors, or advisors who need it and are bound by confidentiality obligations at least as protective as those in this Agreement, or as required by law, provided the disclosing party is given reasonable notice where legally permissible.</p>
                 </div>
 
                 <!-- Section 12 -->
                 <div class="space-y-4">
-                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">12. General Provisions</h2>
-                    <div class="space-y-4 text-slate-600 leading-relaxed">
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">12.1 Governing Law and Jurisdiction</h3>
-                            <p>This Agreement shall be governed by and construed in accordance with the laws of India, without regard to its conflict of laws provisions. Any dispute, controversy, or claim arising out of or relating to this Agreement shall be subject to the exclusive jurisdiction of the competent courts located in Bangalore (Bengaluru), Karnataka, India.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">12.2 Dispute Resolution</h3>
-                            <p>Prior to initiating formal legal proceedings, the parties agree to attempt to resolve any dispute through good-faith negotiation between senior representatives for a period of thirty (30) days. If unresolved, the dispute shall be referred to and finally resolved by binding arbitration in Bangalore, India, in accordance with the Arbitration and Conciliation Act, 1996 (as amended). The arbitral tribunal shall consist of a sole arbitrator mutually appointed by the parties. The language of arbitration shall be English.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">12.3 Entire Agreement</h3>
-                            <p>This Agreement, together with all Order Forms and any incorporated schedules or addenda, constitutes the entire agreement between the parties with respect to its subject matter and supersedes all prior or contemporaneous agreements, representations, or negotiations. In the event of conflict, the Order Form shall take precedence over these Terms.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">12.4 Amendments</h3>
-                            <p>Attrivo may update these Terms from time to time. Material changes will be communicated via email or in-platform notice. Continued use of the Services after the effective date of any amendment constitutes acceptance.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">12.5 Waiver and Severability</h3>
-                            <p>Failure to enforce any provision of this Agreement shall not constitute a waiver. If any provision is found to be unenforceable, it shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions shall remain in full force.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">12.6 Force Majeure</h3>
-                            <p>Neither party shall be liable for delays or failure to perform due to causes beyond its reasonable control, including natural disasters, war, acts of government, cyberattacks, or widespread infrastructure failures, provided the affected party gives prompt notice and uses reasonable efforts to resume performance.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">12.7 Assignment</h3>
-                            <p>Neither party may assign this Agreement without the other's prior written consent, except in connection with a merger, acquisition, or sale of substantially all of a party's assets. Any attempted assignment in violation of this section is void.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">12.8 Notices</h3>
-                            <p>All legal notices must be in writing and sent to the address specified in the Order Form, or for Attrivo, to: <a href="mailto:info@attrivo.in" class="text-blue-600 hover:underline">info@attrivo.in</a>. Notices sent by email are effective upon transmission; notices sent by courier are effective upon delivery.</p>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-slate-800 mb-1">12.9 Independent Contractors</h3>
-                            <p>The parties are independent contractors. Nothing in this Agreement creates an employment, partnership, joint venture, or agency relationship between Attrivo and Customer.</p>
-                        </div>
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">12. Warranties and Disclaimers</h2>
+                    <p class="text-slate-600 leading-relaxed">Each party warrants that it has the legal authority to enter into this Agreement. Except for this limited warranty, the Services, our SDKs, APIs, dashboard, documentation, and all data, reports, scores, and outputs generated through the Services are provided strictly on an "as is" and "as available" basis, without warranty of any kind, whether express, implied, or statutory, including any implied warranty of merchantability, fitness for a particular purpose, non-infringement, uninterrupted operation, or that the Services will be error-free. To the extent any such warranty cannot lawfully be excluded, it is limited to the shortest period and narrowest scope permitted by applicable law.</p>
+                    <p class="text-slate-600 leading-relaxed">Attribution, analytics, segmentation, and journey-measurement outputs depend on third-party platforms, networks, operating systems, device settings, End User consent choices, and Customer's own implementation of the SDK, all of which are outside our control. Accordingly, we do not represent or warrant the accuracy, completeness, reliability, or timeliness of any data, report, or output made available through the Services, and Customer assumes sole responsibility for any business, marketing, financial, or other decision made in reliance on it. Any discrepancy between our reporting and that of a third-party advertising network, app store, or other platform is not a breach of this Agreement.</p>
+                    <p class="text-slate-600 leading-relaxed">Features, modules, or functionality that we make available at no additional charge, on a free tier, as part of a Trial, or on a beta, pilot, or early-access basis are provided with no warranty whatsoever, may be modified or withdrawn at any time without notice, and are used entirely at Customer's own risk.</p>
+                </div>
+
+                <!-- Section 13 -->
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">13. Limitation of Liability</h2>
+                    <p class="text-slate-600 leading-relaxed uppercase text-sm font-medium">Customer's use of the Services is at its own risk, to the maximum extent permitted by applicable law. In no event will Attrivo be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for any loss of profits, revenue, business opportunity, goodwill, or data, or the cost of substitute services, arising out of or related to this Agreement or the Services, whether based in contract, tort, strict liability, or otherwise, and regardless of whether Attrivo has been advised of the possibility of such damages and regardless of whether a remedy set out in this Agreement fails of its essential purpose.</p>
+                    <p class="text-slate-600 leading-relaxed">Attrivo will not be liable for any acts, omissions, downtime, or data inaccuracies of any third-party network, platform, operating-system provider, telecom carrier, or other service that Customer chooses to integrate with, or that interoperates with, the Services, nor for Customer's or any Authorized User's misuse or misconfiguration of the Services, SDK, or APIs.</p>
+                    <p class="text-slate-600 leading-relaxed">Subject to the following sentence, Attrivo's entire cumulative liability arising out of or relating to this Agreement, however arising, will not exceed the total fees actually paid by Customer to Attrivo in the six (6) months immediately preceding the event giving rise to the claim. This cap will not apply only where, and to the minimum extent that, applicable law does not permit such a limit, or in the case of Attrivo's fraud.</p>
+                    <p class="text-slate-600 leading-relaxed">This Section 13 reflects an agreed allocation of risk between the parties and is a fundamental basis of the fees charged for the Services; the Services would not be offered on these commercial terms without it.</p>
+                </div>
+
+                <!-- Section 14 -->
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">14. Indemnification</h2>
+                    <p class="text-slate-600 leading-relaxed">Customer agrees to defend, indemnify, and hold harmless Attrivo and its officers, directors, employees, and affiliates from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising out of or in connection with: (a) Customer's or any Authorized User's use of the Services; (b) Customer's or any Authorized User's breach of Section 5 (Customer's Use of the Services) or any other provision of this Agreement; (c) Customer's violation of applicable data protection, telecom, consumer-protection, or anti-spam law, including in connection with End User consent, push notifications, or messaging; (d) any End User claim relating to the collection or processing of their data through the Services as implemented by Customer; and (e) any dispute between Customer and a third-party network, platform, or partner with which Customer has chosen to integrate the Services.</p>
+                    <p class="text-slate-600 leading-relaxed">Attrivo's sole obligation with respect to any claim that the Services, as provided by us and used strictly in accordance with this Agreement, infringe a third party's intellectual property rights, is, at our option and expense, to: (i) procure the right for Customer to continue using the affected part of the Services; (ii) modify or replace the affected part to make it non-infringing; or (iii) terminate the affected Order and refund any prepaid, unused fees. This is Customer's exclusive remedy for any such claim, and this obligation does not extend to any claim arising from Customer Data, Customer's combination of the Services with other products, or Customer's use of the Services outside the scope of this Agreement.</p>
+                </div>
+
+                <!-- Section 15 -->
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">15. Term, Termination, and Survival</h2>
+                    <p class="text-slate-600 leading-relaxed">This Agreement remains in effect for as long as an Order is active, plus any period during which Customer continues to access the Services. Either party may terminate this Agreement for the other party's uncured material breach upon 30 days' written notice describing the breach, if it remains uncured at the end of that period. We may suspend or terminate access immediately in cases of suspected fraud, security risk, or a violation of Section 5 that creates legal exposure for us or our other customers.</p>
+                    <p class="text-slate-600 leading-relaxed">Upon termination, Customer's right to access the Services ends, and we will make Customer Data available for export for 30 days following termination, after which it will be deleted or anonymized in accordance with our data retention practices, unless a longer retention period is required by law. If Customer is on a free tier, Trial, or has not used the Services for 60 consecutive days, we may suspend the account, stop data collection, and remove the associated Customer Data at any time, with or without prior notice, and without any liability to Attrivo. Sections 6, 9, 11, 12, 13, 14, this Section 15, and Sections 18 and 19 survive termination or expiry of this Agreement.</p>
+                </div>
+
+                <!-- Section 16 -->
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">16. Force Majeure</h2>
+                    <p class="text-slate-600 leading-relaxed">Neither party will be liable for any delay or failure to perform its obligations (other than payment obligations) resulting from causes beyond its reasonable control, including acts of God, natural disaster, war, civil unrest, act of government, labour dispute, internet or telecommunications failure, or failure of a third-party hosting or connectivity provider, provided the affected party uses reasonable efforts to mitigate the impact and resumes performance promptly once the cause is resolved.</p>
+                </div>
+
+                <!-- Section 17 -->
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">17. Beta and Preview Features</h2>
+                    <p class="text-slate-600 leading-relaxed">We may from time to time make available features, modules, or functionality labelled as beta, preview, or early access. Such features are provided for evaluation purposes only, may be changed or discontinued at any time, and are provided "as is" without the warranties in Section 12, unless the parties agree otherwise in writing.</p>
+                </div>
+
+                <!-- Section 18 -->
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">18. Changes to This Agreement</h2>
+                    <p class="text-slate-600 leading-relaxed">We may update this Agreement from time to time to reflect changes in the Services or applicable law. We will provide at least 30 days' notice of material changes by email or through the dashboard before they take effect. If Customer objects to a material change, Customer may terminate the affected Order effective as of the change's effective date by notifying us in writing within that notice period; continued use of the Services after the effective date constitutes acceptance of the updated Agreement.</p>
+                </div>
+
+                <!-- Section 19 -->
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">19. Governing Law and Jurisdiction</h2>
+                    <p class="text-slate-600 leading-relaxed">This Agreement is governed by the laws of India, without regard to its conflict of laws principles. Subject to Section 20, the parties submit to the exclusive jurisdiction of the competent courts located in Bangalore, Karnataka, India for any dispute arising out of or relating to this Agreement, and each party waives any objection to that venue on grounds of inconvenience or otherwise.</p>
+                </div>
+
+                <!-- Section 20 -->
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">20. Dispute Resolution</h2>
+                    <p class="text-slate-600 leading-relaxed">The parties will first attempt in good faith to resolve any dispute arising out of or relating to this Agreement through discussions between their respective senior representatives within 30 days of a written request. If the dispute is not resolved within that period, either party may pursue its remedies before the courts identified in Section 19, or, if the parties separately agree in writing, through arbitration seated in Bangalore, Karnataka, India under the Arbitration and Conciliation Act, 1996.</p>
+                </div>
+
+                <!-- Section 21 -->
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">21. General</h2>
+                    <div class="space-y-3 text-slate-600 leading-relaxed">
+                        <p><span class="font-semibold text-slate-800">Entire Agreement.</span> This Agreement, together with any applicable Order, constitutes the entire agreement between the parties regarding the Services and supersedes any prior agreements or understandings on the same subject.</p>
+                        <p><span class="font-semibold text-slate-800">Severability.</span> If any provision of this Agreement is found unenforceable, the remaining provisions will continue in full force and effect.</p>
+                        <p><span class="font-semibold text-slate-800">Assignment.</span> Neither party may assign this Agreement without the other's written consent, except in connection with a merger, acquisition, or sale of substantially all assets, provided the assignee agrees to be bound by this Agreement.</p>
+                        <p><span class="font-semibold text-slate-800">No Waiver.</span> Failure to enforce any provision of this Agreement is not a waiver of the right to do so later.</p>
+                        <p><span class="font-semibold text-slate-800">Publicity.</span> Neither party will use the other's name, logo, or trademarks in public marketing materials without the other's prior written consent, except that we may list Customer's name and logo in a general customer list unless Customer opts out in writing.</p>
+                        <p><span class="font-semibold text-slate-800">Notices.</span> Notices under this Agreement should be sent to <a href="mailto:info@attrivo.in" class="text-blue-600 hover:underline">info@attrivo.in</a> or to Customer's account contact on file, and are deemed received when sent by email with confirmation of delivery or by recognized courier.</p>
+                    </div>
+                </div>
+
+                <!-- Section 22 -->
+                <div class="space-y-3">
+                    <h2 class="text-xl font-bold text-slate-900 border-b border-slate-100 pb-2">22. Contact</h2>
+                    <p class="text-slate-600 leading-relaxed">Questions about this Agreement can be directed to:</p>
+                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200 text-sm text-slate-600 space-y-1">
+                        <p class="font-semibold text-slate-800">Attrivo Intelligence Private Limited</p>
+                        <p>Email: <a href="mailto:info@attrivo.in" class="text-blue-600 hover:underline">info@attrivo.in</a></p>
+                        <p>Registered office: Bangalore, Karnataka, India</p>
                     </div>
                 </div>
 
@@ -322,13 +238,12 @@
             <a href="/" class="flex justify-center">
                 <img src="/Attrivo.svg" alt="Attrivo Logo White" class="h-8 w-auto brightness-0 invert opacity-80">
             </a>
-            <p class="text-sm max-w-md mx-auto">
-                Next-generation attribution & analytics solutions, built for growth marketers.            </p>
+            <p class="text-sm max-w-md mx-auto">Next-generation attribution &amp; analytics solutions, built for growth marketers.</p>
             <div class="flex flex-wrap justify-center gap-6 text-xs font-medium text-slate-500">
                 <a href="/" class="hover:text-slate-300 transition">Home</a>
                 <a href="/terms" class="hover:text-slate-300 transition">Terms of Service</a>
                 <a href="/privacy" class="hover:text-slate-300 transition">Privacy Policy</a>
-                <a href="/#contact" class="hover:text-slate-300 transition">Contact Us</a>
+                <a href="/contact" class="hover:text-slate-300 transition">Contact Us</a>
             </div>
             <div class="text-xs text-slate-700 pt-6 border-t border-slate-900">
                 &copy; 2026 Attrivo Intelligence Private Limited. All rights reserved.
