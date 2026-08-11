@@ -24,11 +24,55 @@
  <meta property="og:image:type" content="image/jpeg">
  <meta property="og:image:width" content="1200">
  <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="Attrivo — Unify Marketing ROI. Eliminate Ad Fraud.">
 
  <meta name="twitter:card" content="summary_large_image">
  <meta name="twitter:title" content="Attrivo — Unify Marketing ROI. Eliminate Ad Fraud.">
  <meta name="twitter:description" content="Enterprise attribution platform that measures every engagement, automates cross-network integrations, and protects your budget from install fraud and in-app fraud.">
  <meta name="twitter:image" content="https://attrivo.in/og-image.jpg">
+ <meta name="twitter:image:alt" content="Attrivo — Unify Marketing ROI. Eliminate Ad Fraud.">
+ <meta name="theme-color" content="#2563eb">
+
+ <script type="application/ld+json">
+ {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "https://attrivo.in/#organization",
+    "name": "Attrivo Intelligence Private Limited",
+    "url": "https://attrivo.in/",
+    "logo": "https://attrivo.in/Attrivo.svg",
+    "email": "info@attrivo.in",
+    "telephone": "+91-95035-81221",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Bengaluru",
+     "addressRegion": "Karnataka",
+     "addressCountry": "IN"
+    },
+    "sameAs": []
+   },
+   {
+    "@type": "WebSite",
+    "@id": "https://attrivo.in/#website",
+    "url": "https://attrivo.in/",
+    "name": "Attrivo",
+    "publisher": { "@id": "https://attrivo.in/#organization" },
+    "inLanguage": "en"
+   },
+   {
+    "@type": "WebPage",
+    "@id": "https://attrivo.in/#webpage",
+    "url": "https://attrivo.in/",
+    "name": "Attrivo | Enterprise Marketing Attribution & Ad Fraud Prevention",
+    "isPartOf": { "@id": "https://attrivo.in/#website" },
+    "about": { "@id": "https://attrivo.in/#organization" },
+    "description": "Enterprise attribution platform that measures every engagement, automates cross-network integrations, and protects your budget from install fraud and in-app fraud."
+   }
+  ]
+ }
+ </script>
 
  <script src="https://cdn.tailwindcss.com"></script>
  <style>
@@ -56,11 +100,11 @@
 
  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-   <div class="flex items-center cursor-pointer" onclick="switchPage('home')">
-    <img src="Attrivo.svg" alt="Attrivo Logo" class="h-7 w-auto">
-   </div>
-   <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
-    <button onclick="switchPage('home')" class="nav-link hover:text-blue-600 transition font-semibold">Home</button>
+            <a href="/" class="flex items-center">
+                <img src="Attrivo.svg" alt="Attrivo Logo" class="h-7 w-auto">
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="/" class="nav-link hover:text-blue-600 transition font-semibold">Home</a>
     <a href="/san-setup" class="nav-link hover:text-blue-600 transition font-semibold">SAN Integration</a>
     <a href="/terms" class="nav-link hover:text-blue-600 transition font-semibold">Terms of Service</a>
     <a href="/privacy" class="nav-link hover:text-blue-600 transition font-semibold">Privacy Policy</a>
@@ -322,86 +366,17 @@
 
   </div>
 
-  <div id="page-terms" class="tab-content">
-   <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-     <div class="border-b border-slate-200 pb-4">
-      <h1 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Terms of Service</h1>
-      <p class="text-sm text-slate-500 mt-2">Effective 3rd April 2026</p>
-     </div>
-     <div class="prose prose-slate max-w-none space-y-6 text-slate-600 leading-relaxed">
-      <p>Welcome to Attrivo. Please read these Terms of Service ("Terms") carefully before using our software platform, attribution tracking APIs, and data dash spaces. By utilizing our utilities, you agree to comply with and be bound by these legal rules unconditionally.</p>
-      <h3 class="text-lg font-bold text-slate-900 mt-6">1. Acceptance & Access Scope</h3>
-      <p>Attrivo provisions marketing attribution pipelines, tracking links, and anti-fraud monitoring infrastructure. Access permissions are granted explicitly subject to full service-level subscription maintenance. Any malicious attempt to exploit endpoints, spoof package payloads, or run reverse-engineering protocols on our processing SDK configurations is explicitly prohibited.</p>
-      <h3 class="text-lg font-bold text-slate-900 mt-6">2. Infrastructure & API Fair Use</h3>
-      <p>Subscribers must ensure that administrative keys, lookback window settings, and security tokens are kept strictly confidential. We maintain absolute processing limits to preserve high availability. Any continuous query volume that triggers anomalous platform degradation will result in automated throttling or temporary pipeline suspension to safeguard neighboring tenants.</p>
-      <h3 class="text-lg font-bold text-slate-900 mt-6">3. System Limitations & Accuracy Liability</h3>
-      <p>Attrivo extracts multi-channel metrics, device signals, and fraud event patterns programmatically. While our engines strive for accurate classification across networks like Meta and Google Ads, we give no absolute warranty regarding error-free network delivery or real-time delivery guarantees from third-party SAN networks. Attrivo holds zero liability for direct or downstream ad-spend capital losses incurred through performance decisions.</p>
-      <h3 class="text-lg font-bold text-slate-900 mt-6">4. Termination Protocols</h3>
-      <p>Either party may terminate active agreements with standard written notice if substantial billing failures or policy violations occur. Upon termination, active smart tracking links will dissolve instantly, data ingestion loops will close, and remaining data assets can be exported to cloud systems by the client within specified grace terms.</p>
-     </div>
-    </div>
-   </section>
-  </div>
-
-  <div id="page-privacy" class="tab-content">
-   <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-     <div class="border-b border-slate-200 pb-4">
-      <h1 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Privacy Policy</h1>
-      <p class="text-sm text-slate-500 mt-2">Effective 3rd April 2026</p>
-     </div>
-     <div class="prose prose-slate max-w-none space-y-6 text-slate-600 leading-relaxed">
-      <p>At Attrivo, data integrity, transparency, and data sovereignty compliance are central to our design. This Privacy Policy outlines exactly how our software infrastructure parses, treats, and isolates information handled on behalf of enterprise partners across global systems.</p>
-      <h3 class="text-lg font-bold text-slate-900 mt-6">1. Log Types and Data Ingestion</h3>
-      <p>To compute precise marketing performance indicators, our infrastructure processes raw interaction triggers, click identifiers, session timestamps, device parameters, platform classes, and network routing metadata. This information is analyzed explicitly to identify conversion paths and isolate fraud threats.</p>
-      <h3 class="text-lg font-bold text-slate-900 mt-6">2. Third-Party SAN Connections & Tokens</h3>
-      <p>When administrators intentionally configure native integrations with partners like Facebook (Meta) or Google Ads, our system stores related authorization strings securely, including App IDs, OAuth tokens, and Decryption Keys. These credentials are used solely to fetch automated conversion logs and perform secure lookback matching cycles.</p>
-      <h3 class="text-lg font-bold text-slate-900 mt-6">3. Storage, Ownership & Raw S3 Export Controls</h3>
-      <p>Attrivo acts strictly as a data processor. All ingested transaction events remain your exclusive property. We offer native system functionalities to automatically bridge raw records into your custom warehouse systems or private cloud storage (such as Amazon S3 buckets) to let you maintain absolute physical data control.</p>
-      <h3 class="text-lg font-bold text-slate-900 mt-6">4. Data Governance Compliance</h3>
-      <p>Our processing modules are structurally isolated to align robustly with applicable local and international data protection laws, emphasizing minimized persistent profiling, restricted cross-border data leakage, and automated record-clearing timelines when requested by system admins.</p>
-     </div>
-    </div>
-   </section>
-  </div>
-
-  <div id="page-contact" class="tab-content">
-   <section class="py-20 bg-slate-50 flex-grow">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm text-center space-y-8">
-      <div class="space-y-3">
-       <span class="text-blue-600 text-4xl block">✉</span>
-       <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Connect with Our Strategy Team</h2>
-       <p class="text-slate-600 max-w-md mx-auto">
-        Want to optimize tracking setups, scale multi-touch pipelines, or schedule an advanced ad-fraud mitigation review? Let's connect.
-       </p>
-      </div>
-      <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 max-w-md mx-auto">
-       <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">Direct Inquiries & Support</span>
-       <a href="mailto:info@attrivo.in" class="text-xl sm:text-2xl font-black text-blue-600 hover:underline break-all">
-        info@attrivo.in
-       </a>
-      </div>
-      <div class="pt-6 border-t border-slate-100 text-xs text-slate-400 max-w-sm mx-auto">
-       We usually respond to architecture validation inquiries and enterprise proof-of-concept setup schedules within one business day.
-      </div>
-     </div>
-    </div>
-   </section>
-  </div>
-
  </main>
 
  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 mt-auto">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-   <div class="flex justify-center cursor-pointer" onclick="switchPage('home')">
-    <img src="Attrivo.svg" alt="Attrivo Logo White" class="h-8 w-auto brightness-0 invert opacity-80">
-   </div>
+   <a href="/" class="flex justify-center">
+    <img src="Attrivo.svg" alt="Attrivo Logo" class="h-8 w-auto brightness-0 invert opacity-80">
+   </a>
    <p class="text-sm max-w-md mx-auto">
-    Next-generation attribution & analytics solutions, built for growth marketers.</p>
+    Next-generation attribution &amp; analytics solutions, built for growth marketers.</p>
    <div class="flex flex-wrap justify-center gap-6 text-xs font-medium text-slate-500">
-    <button onclick="switchPage('home')" class="hover:text-slate-300 transition">Home</button>
+    <a href="/" class="hover:text-slate-300 transition">Home</a>
     <a href="/san-setup" class="hover:text-slate-300 transition">SAN Integration</a>
     <a href="/terms" class="hover:text-slate-300 transition">Terms of Service</a>
     <a href="/privacy" class="hover:text-slate-300 transition">Privacy Policy</a>
