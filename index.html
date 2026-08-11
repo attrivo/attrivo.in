@@ -1,472 +1,449 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attrivo | Enterprise Marketing Attribution & Ad Fraud Prevention</title>
-    <meta name="description" content="Attrivo delivers absolute clarity across your marketing ecosystem. Measure engagements, automate cross-network integrations, and guard your budget against install and in-app fraud.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://attrivo.in/">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Attrivo | Enterprise Marketing Attribution & Ad Fraud Prevention</title>
+ <meta name="description" content="Attrivo delivers absolute clarity across your marketing ecosystem. Measure engagements, automate cross-network integrations, and guard your budget against install and in-app fraud.">
+ <meta name="robots" content="index, follow">
+ <link rel="canonical" href="https://attrivo.in/">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+ <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <!-- Open Graph -->
-    <meta property="fb:app_id" content="835609132786148">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Attrivo">
-    <meta property="og:url" content="https://attrivo.in/">
-    <meta property="og:title" content="Attrivo — Unify Marketing ROI. Eliminate Ad Fraud.">
-    <meta property="og:description" content="Enterprise attribution platform that measures every engagement, automates cross-network integrations, and protects your budget from install fraud and in-app fraud.">
-    <meta property="og:image" content="https://attrivo.in/og-image.jpg">
-    <meta property="og:image:secure_url" content="https://attrivo.in/og-image.jpg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+ <meta property="fb:app_id" content="835609132786148">
+ <meta property="og:locale" content="en_US">
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="Attrivo">
+ <meta property="og:url" content="https://attrivo.in/">
+ <meta property="og:title" content="Attrivo — Unify Marketing ROI. Eliminate Ad Fraud.">
+ <meta property="og:description" content="Enterprise attribution platform that measures every engagement, automates cross-network integrations, and protects your budget from install fraud and in-app fraud.">
+ <meta property="og:image" content="https://attrivo.in/og-image.jpg">
+ <meta property="og:image:secure_url" content="https://attrivo.in/og-image.jpg">
+ <meta property="og:image:type" content="image/jpeg">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Attrivo — Unify Marketing ROI. Eliminate Ad Fraud.">
-    <meta name="twitter:description" content="Enterprise attribution platform that measures every engagement, automates cross-network integrations, and protects your budget from install fraud and in-app fraud.">
-    <meta name="twitter:image" content="https://attrivo.in/og-image.jpg">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Attrivo — Unify Marketing ROI. Eliminate Ad Fraud.">
+ <meta name="twitter:description" content="Enterprise attribution platform that measures every engagement, automates cross-network integrations, and protects your budget from install fraud and in-app fraud.">
+ <meta name="twitter:image" content="https://attrivo.in/og-image.jpg">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        html { scroll-behavior: smooth; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
+ <script src="https://cdn.tailwindcss.com"></script>
+ <style>
+  html { scroll-behavior: smooth; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
 
-        @keyframes floatY {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        .float-1 { animation: floatY 4s ease-in-out infinite; }
-        .float-2 { animation: floatY 4s ease-in-out infinite 0.9s; }
-        .float-3 { animation: floatY 4s ease-in-out infinite 1.8s; }
-        .float-4 { animation: floatY 4s ease-in-out infinite 2.7s; }
+  @keyframes floatY {
+   0%, 100% { transform: translateY(0px); }
+   50% { transform: translateY(-10px); }
+  }
+  .float-1 { animation: floatY 4s ease-in-out infinite; }
+  .float-2 { animation: floatY 4s ease-in-out infinite 0.9s; }
+  .float-3 { animation: floatY 4s ease-in-out infinite 1.8s; }
+  .float-4 { animation: floatY 4s ease-in-out infinite 2.7s; }
 
-        .hero-bg {
-            background: radial-gradient(ellipse at 75% 5%, #bfdbfe 0%, #ddd6fe 20%, #fce7f3 40%, #fff7ed 60%, #ffffff 80%);
-        }
-        .usecase-card:hover .usecase-icon { transform: scale(1.12); }
-        .usecase-icon { transition: transform 0.25s ease; }
-    </style>
+  .hero-bg {
+   background: radial-gradient(ellipse at 75% 5%, #bfdbfe 0%, #ddd6fe 20%, #fce7f3 40%, #fff7ed 60%, #ffffff 80%);
+  }
+  .usecase-card:hover .usecase-icon { transform: scale(1.12); }
+  .usecase-icon { transition: transform 0.25s ease; }
+ </style>
 </head>
 <body class="bg-white text-slate-800 font-sans antialiased flex flex-col min-h-screen">
 
-    <!-- FIXED NAVIGATION BAR -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center cursor-pointer" onclick="switchPage('home')">
-                <img src="Attrivo.svg" alt="Attrivo Logo" class="h-7 w-auto">
-            </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
-                <button onclick="switchPage('home')" class="nav-link hover:text-blue-600 transition font-semibold">Home</button>
-                <a href="/san-setup" class="nav-link hover:text-blue-600 transition font-semibold">SAN Integration</a>
-                <a href="/terms" class="nav-link hover:text-blue-600 transition font-semibold">Terms of Service</a>
-                <a href="/privacy" class="nav-link hover:text-blue-600 transition font-semibold">Privacy Policy</a>
-                <a href="/contact" class="nav-link hover:text-blue-600 transition font-semibold">Contact Us</a>
-            </nav>
-            <div>
-                <a href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium shadow-sm transition">Get Started</a>
-            </div>
+ <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+   <div class="flex items-center cursor-pointer" onclick="switchPage('home')">
+    <img src="Attrivo.svg" alt="Attrivo Logo" class="h-7 w-auto">
+   </div>
+   <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+    <button onclick="switchPage('home')" class="nav-link hover:text-blue-600 transition font-semibold">Home</button>
+    <a href="/san-setup" class="nav-link hover:text-blue-600 transition font-semibold">SAN Integration</a>
+    <a href="/terms" class="nav-link hover:text-blue-600 transition font-semibold">Terms of Service</a>
+    <a href="/privacy" class="nav-link hover:text-blue-600 transition font-semibold">Privacy Policy</a>
+    <a href="/contact" class="nav-link hover:text-blue-600 transition font-semibold">Contact Us</a>
+   </nav>
+   <div>
+    <a href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium shadow-sm transition">Get Started</a>
+   </div>
+  </div>
+ </header>
+
+ <main class="flex-grow">
+
+  <div id="page-home" class="tab-content active">
+
+   <section class="hero-bg relative overflow-hidden py-16 sm:py-24">
+
+    <div class="absolute top-12 left-8 w-3 h-3 bg-blue-400 rounded-full opacity-70"></div>
+    <div class="absolute top-28 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-50"></div>
+    <div class="absolute top-48 left-6 w-4 h-4 bg-indigo-300 rounded-full opacity-40"></div>
+    <div class="absolute bottom-16 left-24 w-3 h-3 bg-pink-300 rounded-full opacity-60"></div>
+    <div class="absolute top-10 right-12 w-14 h-14 border-2 border-blue-200 rounded-full opacity-50"></div>
+    <div class="absolute bottom-12 right-8 w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
+    <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-purple-300 rounded-full opacity-40"></div>
+    <div class="absolute bottom-20 left-1/3 w-10 h-10 border-2 border-purple-200 rounded-lg rotate-12 opacity-30"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-8 items-center">
+
+     <div class="lg:col-span-2 space-y-6">
+      <div class="inline-flex items-center space-x-2 bg-blue-50 border border-blue-200 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider text-blue-600 uppercase">
+       <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+       <span>Next-Gen Attribution Platform</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight text-slate-900">
+       Unify Your Marketing ROI. <span class="text-blue-600">Eliminate Ad Fraud.</span>
+
+      </h1>
+      <p class="text-base sm:text-lg text-slate-500 max-w-xl leading-relaxed">
+       Attrivo delivers absolute clarity across your entire marketing ecosystem. Measure engagements, automate cross-network integrations, and guard your budget against sophisticated install and in-app fraud.
+      </p>
+      <div class="flex flex-wrap gap-4">
+
+       <a href="#usecases" class="bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 px-6 py-3 rounded-xl font-medium text-center transition shadow-sm">Explore Usecases</a>
+      </div>
+     </div>
+
+     <div class="lg:col-span-3 relative mt-14 lg:mt-0">
+
+      <div class="absolute -inset-6 bg-blue-200/25 rounded-3xl blur-3xl pointer-events-none"></div>
+
+      <div class="video-tilt relative bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 z-10" style="will-change:transform; transition: transform 0.15s ease, box-shadow 0.15s ease;">
+       <video autoplay muted loop playsinline poster="Attrivo.png" class="rounded-xl w-full h-auto object-cover">
+        <source src="Attrivo.mp4" type="video/mp4">
+        <img src="Attrivo.png" alt="Attrivo Real-Time Analytics Dashboard" class="rounded-xl w-full h-auto">
+       </video>
+      </div>
+
+      <div class="absolute -top-5 left-[8%] bg-white rounded-2xl shadow-xl border border-slate-100 px-4 py-3 float-1 z-20">
+       <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide leading-none mb-1">Revenue</p>
+       <p class="text-lg font-black text-slate-900 leading-none">₹1,200</p>
+       <span class="text-xs bg-emerald-50 text-emerald-600 font-bold px-1.5 py-0.5 rounded-full mt-1.5 inline-block">+16.2% MoM</span>
+      </div>
+
+      <div class="absolute top-[18%] -right-5 bg-white rounded-2xl shadow-xl border border-slate-100 px-4 py-3 float-2 z-20">
+       <p class="text-xs font-semibold text-slate-400 leading-none mb-1">average CPI</p>
+       <p class="text-lg font-black text-blue-600 leading-none">₹12</p>
+       <span class="text-xs text-emerald-600 font-semibold mt-1 inline-block">-12.2% Savings</span>
+      </div>
+
+      <div class="absolute bottom-[28%] -left-5 bg-white rounded-2xl shadow-xl border border-slate-100 px-4 py-3 float-3 z-20">
+       <p class="text-xs font-semibold text-slate-400 leading-none mb-1">Total Installs</p>
+       <p class="text-lg font-black text-slate-900 leading-none">3,800</p>
+       <div class="mt-1.5 flex space-x-1">
+        <span class="text-[10px] bg-blue-100 text-blue-700 font-semibold px-1.5 py-0.5 rounded">Organic</span>
+        <span class="text-[10px] bg-purple-100 text-purple-700 font-semibold px-1.5 py-0.5 rounded">Non-Org</span>
+       </div>
+      </div>
+
+      <div class="absolute -bottom-5 right-[22%] bg-white rounded-2xl shadow-xl border border-slate-100 px-4 py-3 float-4 z-20">
+       <p class="text-xs font-semibold text-slate-400 leading-none mb-1">Average CPA</p>
+       <p class="text-lg font-black text-slate-900 leading-none">₹180</p>
+       <span class="text-xs text-emerald-600 font-semibold mt-1 inline-block">-8.2% Savings</span>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Attribution and Analytics</h2>
+      <p class="text-lg text-slate-600">Gain actionable performance transparency across key marketing metrics dynamically mapped to standard configurations.</p>
+     </div>
+
+     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+
+      <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
+       <div class="h-1.5 w-full bg-blue-500"></div>
+       <div class="p-6">
+        <div class="flex items-center justify-between mb-3">
+         <div class="w-9 h-9 bg-blue-50 rounded-xl flex items-center justify-center text-lg">💰</div>
+         <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+16.2% MoM</span>
         </div>
-    </header>
+        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Revenue</p>
+        <p class="text-3xl font-extrabold text-slate-900 mt-1">₹1,200</p>
+        <div class="mt-3 h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-blue-500 rounded-full" style="width:68%"></div></div>
+       </div>
+      </div>
 
-    <!-- MAIN CONTENT CONTAINER -->
-    <main class="flex-grow">
-
-        <!-- ================= PAGE 1: HOME PAGE ================= -->
-        <div id="page-home" class="tab-content active">
-
-            <!-- HERO SECTION -->
-            <section class="hero-bg relative overflow-hidden py-16 sm:py-24">
-                <!-- Decorative dots -->
-                <div class="absolute top-12 left-8 w-3 h-3 bg-blue-400 rounded-full opacity-70"></div>
-                <div class="absolute top-28 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-50"></div>
-                <div class="absolute top-48 left-6 w-4 h-4 bg-indigo-300 rounded-full opacity-40"></div>
-                <div class="absolute bottom-16 left-24 w-3 h-3 bg-pink-300 rounded-full opacity-60"></div>
-                <div class="absolute top-10 right-12 w-14 h-14 border-2 border-blue-200 rounded-full opacity-50"></div>
-                <div class="absolute bottom-12 right-8 w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
-                <div class="absolute top-1/3 right-1/4 w-2 h-2 bg-purple-300 rounded-full opacity-40"></div>
-                <div class="absolute bottom-20 left-1/3 w-10 h-10 border-2 border-purple-200 rounded-lg rotate-12 opacity-30"></div>
-
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-8 items-center">
-                    <!-- Left: Text Content (2/5 width) -->
-                    <div class="lg:col-span-2 space-y-6">
-                        <div class="inline-flex items-center space-x-2 bg-blue-50 border border-blue-200 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider text-blue-600 uppercase">
-                            <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-                            <span>Next-Gen Attribution Platform</span>
-                        </div>
-                        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight text-slate-900">
-                            Unify Your Marketing ROI. <span class="text-blue-600">Eliminate Ad Fraud.</span>
-                       
-                        </h1>
-                        <p class="text-base sm:text-lg text-slate-500 max-w-xl leading-relaxed">
-                            Attrivo delivers absolute clarity across your entire marketing ecosystem. Measure engagements, automate cross-network integrations, and guard your budget against sophisticated install and in-app fraud.
-                        </p>
-                        <div class="flex flex-wrap gap-4">
-                            <!-- <button href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium shadow-lg transition">Request a Demo</button> -->
-                            <a href="#usecases" class="bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 px-6 py-3 rounded-xl font-medium text-center transition shadow-sm">Explore Usecases</a>
-                        </div>
-                    </div>
-
-                    <!-- Right: Video (3/5 width) with scattered floating badges -->
-                    <div class="lg:col-span-3 relative mt-14 lg:mt-0">
-                        <!-- Soft glow -->
-                        <div class="absolute -inset-6 bg-blue-200/25 rounded-3xl blur-3xl pointer-events-none"></div>
-
-                        <!-- Video card — full column width, no padding wrapper -->
-                        <div class="video-tilt relative bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 z-10" style="will-change:transform; transition: transform 0.15s ease, box-shadow 0.15s ease;">
-                            <video autoplay muted loop playsinline poster="Attrivo.png" class="rounded-xl w-full h-auto object-cover">
-                                <source src="Attrivo.mp4" type="video/mp4">
-                                <img src="Attrivo.png" alt="Attrivo Real-Time Analytics Dashboard" class="rounded-xl w-full h-auto">
-                            </video>
-                        </div>
-
-                        <!-- Badge: Revenue — upper-left, overlapping top edge -->
-                        <div class="absolute -top-5 left-[8%] bg-white rounded-2xl shadow-xl border border-slate-100 px-4 py-3 float-1 z-20">
-                            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide leading-none mb-1">Revenue</p>
-                            <p class="text-lg font-black text-slate-900 leading-none">₹1,200</p>
-                            <span class="text-xs bg-emerald-50 text-emerald-600 font-bold px-1.5 py-0.5 rounded-full mt-1.5 inline-block">+16.2% MoM</span>
-                        </div>
-
-                        <!-- Badge: Avg CPI — right side, upper third -->
-                        <div class="absolute top-[18%] -right-5 bg-white rounded-2xl shadow-xl border border-slate-100 px-4 py-3 float-2 z-20">
-                            <p class="text-xs font-semibold text-slate-400 leading-none mb-1">average CPI</p>
-                            <p class="text-lg font-black text-blue-600 leading-none">₹12</p>
-                            <span class="text-xs text-emerald-600 font-semibold mt-1 inline-block">-12.2% Savings</span>
-                        </div>
-
-                        <!-- Badge: Total Installs — left side, lower third -->
-                        <div class="absolute bottom-[28%] -left-5 bg-white rounded-2xl shadow-xl border border-slate-100 px-4 py-3 float-3 z-20">
-                            <p class="text-xs font-semibold text-slate-400 leading-none mb-1">Total Installs</p>
-                            <p class="text-lg font-black text-slate-900 leading-none">3,800</p>
-                            <div class="mt-1.5 flex space-x-1">
-                                <span class="text-[10px] bg-blue-100 text-blue-700 font-semibold px-1.5 py-0.5 rounded">Organic</span>
-                                <span class="text-[10px] bg-purple-100 text-purple-700 font-semibold px-1.5 py-0.5 rounded">Non-Org</span>
-                            </div>
-                        </div>
-
-                        <!-- Badge: Average CPA — bottom edge, right of centre -->
-                        <div class="absolute -bottom-5 right-[22%] bg-white rounded-2xl shadow-xl border border-slate-100 px-4 py-3 float-4 z-20">
-                            <p class="text-xs font-semibold text-slate-400 leading-none mb-1">Average CPA</p>
-                            <p class="text-lg font-black text-slate-900 leading-none">₹180</p>
-                            <span class="text-xs text-emerald-600 font-semibold mt-1 inline-block">-8.2% Savings</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- REAL-TIME PERFORMANCE OVERVIEW -->
-            <section class="py-20 bg-white">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Attribution and Analytics</h2>
-                        <p class="text-lg text-slate-600">Gain actionable performance transparency across key marketing metrics dynamically mapped to standard configurations.</p>
-                    </div>
-
-                    <!-- 4 KPI Cards -->
-                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                        <!-- Revenue -->
-                        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                            <div class="h-1.5 w-full bg-blue-500"></div>
-                            <div class="p-6">
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="w-9 h-9 bg-blue-50 rounded-xl flex items-center justify-center text-lg">💰</div>
-                                    <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">+16.2% MoM</span>
-                                </div>
-                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Revenue</p>
-                                <p class="text-3xl font-extrabold text-slate-900 mt-1">₹1,200</p>
-                                <div class="mt-3 h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-blue-500 rounded-full" style="width:68%"></div></div>
-                            </div>
-                        </div>
-                        <!-- Cost -->
-                        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                            <div class="h-1.5 w-full bg-orange-400"></div>
-                            <div class="p-6">
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="w-9 h-9 bg-orange-50 rounded-xl flex items-center justify-center text-lg">📉</div>
-                                    <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">-8.7% Optimal</span>
-                                </div>
-                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Cost</p>
-                                <p class="text-3xl font-extrabold text-slate-900 mt-1">₹600</p>
-                                <div class="mt-3 h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-orange-400 rounded-full" style="width:50%"></div></div>
-                            </div>
-                        </div>
-                        <!-- average CPI -->
-                        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                            <div class="h-1.5 w-full bg-purple-500"></div>
-                            <div class="p-6">
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="w-9 h-9 bg-purple-50 rounded-xl flex items-center justify-center text-lg">📲</div>
-                                    <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">-12.2% Savings</span>
-                                </div>
-                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">average CPI</p>
-                                <p class="text-3xl font-extrabold text-slate-900 mt-1">₹12</p>
-                                <div class="mt-3 h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-purple-500 rounded-full" style="width:30%"></div></div>
-                            </div>
-                        </div>
-                        <!-- Average CPA -->
-                        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                            <div class="h-1.5 w-full bg-teal-500"></div>
-                            <div class="p-6">
-                                <div class="flex items-center justify-between mb-3">
-                                    <div class="w-9 h-9 bg-teal-50 rounded-xl flex items-center justify-center text-lg">🎯</div>
-                                    <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">-8.2% Savings</span>
-                                </div>
-                                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Average CPA</p>
-                                <p class="text-3xl font-extrabold text-slate-900 mt-1">₹180</p>
-                                <div class="mt-3 h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-teal-500 rounded-full" style="width:45%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Engagement + Install cards -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Engagement Trends -->
-                        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-4 flex items-center justify-between border-b border-slate-100">
-                                <h3 class="text-base font-extrabold text-slate-900">Engagement Trends</h3>
-                                <span class="text-xs font-semibold text-blue-600 bg-blue-100 px-2.5 py-1 rounded-full">Updated live</span>
-                            </div>
-                            <div class="p-6 space-y-5">
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="bg-slate-50 rounded-xl p-4">
-                                        <span class="text-xs text-slate-400 font-semibold uppercase tracking-wide block mb-1">Impressions</span>
-                                        <span class="text-2xl font-extrabold text-slate-800">18,540</span>
-                                        <div class="mt-2 h-1.5 bg-slate-200 rounded-full"><div class="h-full bg-blue-500 rounded-full" style="width:90%"></div></div>
-                                    </div>
-                                    <div class="bg-slate-50 rounded-xl p-4">
-                                        <span class="text-xs text-slate-400 font-semibold uppercase tracking-wide block mb-1">Clicks</span>
-                                        <span class="text-2xl font-extrabold text-slate-800">1,950</span>
-                                        <div class="mt-2 h-1.5 bg-slate-200 rounded-full"><div class="h-full bg-indigo-500 rounded-full" style="width:10%"></div></div>
-                                    </div>
-                                </div>
-                                <p class="text-xs text-slate-500 leading-relaxed">Comprehensive click and impression sequence attribution across multi-touch funnels.</p>
-                            </div>
-                        </div>
-
-                        <!-- Install Dynamics -->
-                        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
-                            <div class="bg-gradient-to-r from-emerald-50 to-teal-50 px-6 py-4 flex items-center justify-between border-b border-slate-100">
-                                <h3 class="text-base font-extrabold text-slate-900">Install Dynamics</h3>
-                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Total: 3,800 Installs</span>
-                            </div>
-                            <div class="p-6 space-y-5">
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="bg-slate-50 rounded-xl p-4">
-                                        <span class="text-xs text-slate-400 font-semibold uppercase tracking-wide block mb-1">Organic</span>
-                                        <span class="text-2xl font-extrabold text-slate-700">2,540</span>
-                                        <div class="mt-2 h-1.5 bg-slate-200 rounded-full"><div class="h-full bg-emerald-500 rounded-full" style="width:67%"></div></div>
-                                    </div>
-                                    <div class="bg-slate-50 rounded-xl p-4">
-                                        <span class="text-xs text-slate-400 font-semibold uppercase tracking-wide block mb-1">Non-Organic</span>
-                                        <span class="text-2xl font-extrabold text-slate-700">1,260</span>
-                                        <div class="mt-2 h-1.5 bg-slate-200 rounded-full"><div class="h-full bg-teal-400 rounded-full" style="width:33%"></div></div>
-                                    </div>
-                                </div>
-                                <p class="text-xs text-slate-500 leading-relaxed">Separates legitimate organic discovery markers from paid media performance installs smoothly.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- USE CASES SECTION -->
-            <section id="usecases" class="py-20 bg-slate-50 border-t border-b border-slate-200">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Platform Use Cases</h2>
-                        <p class="text-lg text-slate-600">Explore how Attrivo powers critical modern marketing operations safely and robustly.</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Use Case 1 -->
-                        <div class="usecase-card bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition overflow-hidden">
-                            <div class="bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 p-10 flex items-center justify-center h-44">
-                                <div class="usecase-icon w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center text-4xl shadow-xl shadow-blue-200">🔗</div>
-                            </div>
-                            <div class="p-8 space-y-3">
-                                <h3 class="text-xl font-bold text-slate-900">Multi-Touch Link Generation</h3>
-                                <p class="text-sm text-slate-600 leading-relaxed">
-                                    Build and Measure seamlessly. Generate deterministic lookback links and QR configurations handling custom media sources, re-engagement properties, and custom agency data rules automatically.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Use Case 2 -->
-                        <div class="usecase-card bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition overflow-hidden">
-                            <div class="bg-gradient-to-br from-red-50 via-orange-50 to-red-100 p-10 flex items-center justify-center h-44">
-                                <div class="usecase-icon w-20 h-20 bg-red-500 rounded-2xl flex items-center justify-center text-4xl shadow-xl shadow-red-200">🛡️</div>
-                            </div>
-                            <div class="p-8 space-y-3">
-                                <h3 class="text-xl font-bold text-slate-900">Mobile Ad Fraud Shielding</h3>
-                                <p class="text-sm text-slate-600 leading-relaxed">
-                                    Proactively flag toxic threat anomalies. Block highjacking parameters, device spoofing, server-side emulators, and bot vectors instantly before they consume your growth budgets.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Use Case 3 -->
-                        <div class="usecase-card bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition overflow-hidden">
-                            <div class="bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-100 p-10 flex items-center justify-center h-44">
-                                <div class="usecase-icon w-20 h-20 bg-emerald-600 rounded-2xl flex items-center justify-center text-4xl shadow-xl shadow-emerald-200">☁️</div>
-                            </div>
-                            <div class="p-8 space-y-3">
-                                <h3 class="text-xl font-bold text-slate-900">Unified Cloud Data Export</h3>
-                                <p class="text-sm text-slate-600 leading-relaxed">
-                                    Keep clean data close to your infrastructure. Stream raw log variables directly into target cloud frameworks like secure Amazon S3 objects seamlessly with dedicated folder prefix controls.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Use Case 4 -->
-                        <div class="usecase-card bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition overflow-hidden">
-                            <div class="bg-gradient-to-br from-violet-50 via-purple-50 to-violet-100 p-10 flex items-center justify-center h-44">
-                                <div class="usecase-icon w-20 h-20 bg-violet-600 rounded-2xl flex items-center justify-center text-4xl shadow-xl shadow-violet-200">🔌</div>
-                            </div>
-                            <div class="p-8 space-y-3">
-                                <h3 class="text-xl font-bold text-slate-900">SAN Integration Setup</h3>
-                                <p class="text-sm text-slate-600 leading-relaxed">
-                                    Accurately attribute paid traffic from Google and Meta. Configure auto-tagging, UTM parameters, and postback mappings so every campaign click reaches Attrivo with full attribution signals — eliminating misreported organic traffic.
-                                </p>
-                                <a href="/san-setup" class="inline-block mt-2 text-xs font-semibold text-violet-600 hover:text-violet-800 transition">View Setup Guide →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+      <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
+       <div class="h-1.5 w-full bg-orange-400"></div>
+       <div class="p-6">
+        <div class="flex items-center justify-between mb-3">
+         <div class="w-9 h-9 bg-orange-50 rounded-xl flex items-center justify-center text-lg">📉</div>
+         <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">-8.7% Optimal</span>
         </div>
-        <!-- End page-home -->
+        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Cost</p>
+        <p class="text-3xl font-extrabold text-slate-900 mt-1">₹600</p>
+        <div class="mt-3 h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-orange-400 rounded-full" style="width:50%"></div></div>
+       </div>
+      </div>
 
-        <!-- ================= PAGE 2: TERMS OF SERVICE ================= -->
-        <div id="page-terms" class="tab-content">
-            <section class="py-16 bg-white">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-                    <div class="border-b border-slate-200 pb-4">
-                        <h1 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Terms of Service</h1>
-                        <p class="text-sm text-slate-500 mt-2">Effective 3rd April 2026</p>
-                    </div>
-                    <div class="prose prose-slate max-w-none space-y-6 text-slate-600 leading-relaxed">
-                        <p>Welcome to Attrivo. Please read these Terms of Service ("Terms") carefully before using our software platform, attribution tracking APIs, and data dash spaces. By utilizing our utilities, you agree to comply with and be bound by these legal rules unconditionally.</p>
-                        <h3 class="text-lg font-bold text-slate-900 mt-6">1. Acceptance & Access Scope</h3>
-                        <p>Attrivo provisions marketing attribution pipelines, tracking links, and anti-fraud monitoring infrastructure. Access permissions are granted explicitly subject to full service-level subscription maintenance. Any malicious attempt to exploit endpoints, spoof package payloads, or run reverse-engineering protocols on our processing SDK configurations is explicitly prohibited.</p>
-                        <h3 class="text-lg font-bold text-slate-900 mt-6">2. Infrastructure & API Fair Use</h3>
-                        <p>Subscribers must ensure that administrative keys, lookback window settings, and security tokens are kept strictly confidential. We maintain absolute processing limits to preserve high availability. Any continuous query volume that triggers anomalous platform degradation will result in automated throttling or temporary pipeline suspension to safeguard neighboring tenants.</p>
-                        <h3 class="text-lg font-bold text-slate-900 mt-6">3. System Limitations & Accuracy Liability</h3>
-                        <p>Attrivo extracts multi-channel metrics, device signals, and fraud event patterns programmatically. While our engines strive for accurate classification across networks like Meta and Google Ads, we give no absolute warranty regarding error-free network delivery or real-time delivery guarantees from third-party SAN networks. Attrivo holds zero liability for direct or downstream ad-spend capital losses incurred through performance decisions.</p>
-                        <h3 class="text-lg font-bold text-slate-900 mt-6">4. Termination Protocols</h3>
-                        <p>Either party may terminate active agreements with standard written notice if substantial billing failures or policy violations occur. Upon termination, active smart tracking links will dissolve instantly, data ingestion loops will close, and remaining data assets can be exported to cloud systems by the client within specified grace terms.</p>
-                    </div>
-                </div>
-            </section>
+      <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
+       <div class="h-1.5 w-full bg-purple-500"></div>
+       <div class="p-6">
+        <div class="flex items-center justify-between mb-3">
+         <div class="w-9 h-9 bg-purple-50 rounded-xl flex items-center justify-center text-lg">📲</div>
+         <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">-12.2% Savings</span>
         </div>
+        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">average CPI</p>
+        <p class="text-3xl font-extrabold text-slate-900 mt-1">₹12</p>
+        <div class="mt-3 h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-purple-500 rounded-full" style="width:30%"></div></div>
+       </div>
+      </div>
 
-        <!-- ================= PAGE 3: PRIVACY POLICY ================= -->
-        <div id="page-privacy" class="tab-content">
-            <section class="py-16 bg-white">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-                    <div class="border-b border-slate-200 pb-4">
-                        <h1 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Privacy Policy</h1>
-                        <p class="text-sm text-slate-500 mt-2">Effective 3rd April 2026</p>
-                    </div>
-                    <div class="prose prose-slate max-w-none space-y-6 text-slate-600 leading-relaxed">
-                        <p>At Attrivo, data integrity, transparency, and data sovereignty compliance are central to our design. This Privacy Policy outlines exactly how our software infrastructure parses, treats, and isolates information handled on behalf of enterprise partners across global systems.</p>
-                        <h3 class="text-lg font-bold text-slate-900 mt-6">1. Log Types and Data Ingestion</h3>
-                        <p>To compute precise marketing performance indicators, our infrastructure processes raw interaction triggers, click identifiers, session timestamps, device parameters, platform classes, and network routing metadata. This information is analyzed explicitly to identify conversion paths and isolate fraud threats.</p>
-                        <h3 class="text-lg font-bold text-slate-900 mt-6">2. Third-Party SAN Connections & Tokens</h3>
-                        <p>When administrators intentionally configure native integrations with partners like Facebook (Meta) or Google Ads, our system stores related authorization strings securely, including App IDs, OAuth tokens, and Decryption Keys. These credentials are used solely to fetch automated conversion logs and perform secure lookback matching cycles.</p>
-                        <h3 class="text-lg font-bold text-slate-900 mt-6">3. Storage, Ownership & Raw S3 Export Controls</h3>
-                        <p>Attrivo acts strictly as a data processor. All ingested transaction events remain your exclusive property. We offer native system functionalities to automatically bridge raw records into your custom warehouse systems or private cloud storage (such as Amazon S3 buckets) to let you maintain absolute physical data control.</p>
-                        <h3 class="text-lg font-bold text-slate-900 mt-6">4. Data Governance Compliance</h3>
-                        <p>Our processing modules are structurally isolated to align robustly with applicable local and international data protection laws, emphasizing minimized persistent profiling, restricted cross-border data leakage, and automated record-clearing timelines when requested by system admins.</p>
-                    </div>
-                </div>
-            </section>
+      <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
+       <div class="h-1.5 w-full bg-teal-500"></div>
+       <div class="p-6">
+        <div class="flex items-center justify-between mb-3">
+         <div class="w-9 h-9 bg-teal-50 rounded-xl flex items-center justify-center text-lg">🎯</div>
+         <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">-8.2% Savings</span>
         </div>
+        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Average CPA</p>
+        <p class="text-3xl font-extrabold text-slate-900 mt-1">₹180</p>
+        <div class="mt-3 h-1.5 bg-slate-100 rounded-full"><div class="h-full bg-teal-500 rounded-full" style="width:45%"></div></div>
+       </div>
+      </div>
+     </div>
 
-        <!-- ================= PAGE 4: CONTACT US ================= -->
-        <div id="page-contact" class="tab-content">
-            <section class="py-20 bg-slate-50 flex-grow">
-                <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm text-center space-y-8">
-                        <div class="space-y-3">
-                            <span class="text-blue-600 text-4xl block">✉</span>
-                            <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Connect with Our Strategy Team</h2>
-                            <p class="text-slate-600 max-w-md mx-auto">
-                                Want to optimize tracking setups, scale multi-touch pipelines, or schedule an advanced ad-fraud mitigation review? Let's connect.
-                            </p>
-                        </div>
-                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 max-w-md mx-auto">
-                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">Direct Inquiries & Support</span>
-                            <a href="mailto:info@attrivo.in" class="text-xl sm:text-2xl font-black text-blue-600 hover:underline break-all">
-                                info@attrivo.in
-                            </a>
-                        </div>
-                        <div class="pt-6 border-t border-slate-100 text-xs text-slate-400 max-w-sm mx-auto">
-                            We usually respond to architecture validation inquiries and enterprise proof-of-concept setup schedules within one business day.
-                        </div>
-                    </div>
-                </div>
-            </section>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
+       <div class="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-4 flex items-center justify-between border-b border-slate-100">
+        <h3 class="text-base font-extrabold text-slate-900">Engagement Trends</h3>
+        <span class="text-xs font-semibold text-blue-600 bg-blue-100 px-2.5 py-1 rounded-full">Updated live</span>
+       </div>
+       <div class="p-6 space-y-5">
+        <div class="grid grid-cols-2 gap-4">
+         <div class="bg-slate-50 rounded-xl p-4">
+          <span class="text-xs text-slate-400 font-semibold uppercase tracking-wide block mb-1">Impressions</span>
+          <span class="text-2xl font-extrabold text-slate-800">18,540</span>
+          <div class="mt-2 h-1.5 bg-slate-200 rounded-full"><div class="h-full bg-blue-500 rounded-full" style="width:90%"></div></div>
+         </div>
+         <div class="bg-slate-50 rounded-xl p-4">
+          <span class="text-xs text-slate-400 font-semibold uppercase tracking-wide block mb-1">Clicks</span>
+          <span class="text-2xl font-extrabold text-slate-800">1,950</span>
+          <div class="mt-2 h-1.5 bg-slate-200 rounded-full"><div class="h-full bg-indigo-500 rounded-full" style="width:10%"></div></div>
+         </div>
         </div>
+        <p class="text-xs text-slate-500 leading-relaxed">Comprehensive click and impression sequence attribution across multi-touch funnels.</p>
+       </div>
+      </div>
 
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <div class="flex justify-center cursor-pointer" onclick="switchPage('home')">
-                <img src="Attrivo.svg" alt="Attrivo Logo White" class="h-8 w-auto brightness-0 invert opacity-80">
-            </div>
-            <p class="text-sm max-w-md mx-auto">
-                Next-generation attribution & analytics solutions, built for growth marketers.</p>
-            <div class="flex flex-wrap justify-center gap-6 text-xs font-medium text-slate-500">
-                <button onclick="switchPage('home')" class="hover:text-slate-300 transition">Home</button>
-                <a href="/san-setup" class="hover:text-slate-300 transition">SAN Integration</a>
-                <a href="/terms" class="hover:text-slate-300 transition">Terms of Service</a>
-                <a href="/privacy" class="hover:text-slate-300 transition">Privacy Policy</a>
-                <a href="/contact" class="hover:text-slate-300 transition">Contact Us</a>
-            </div>
-            <div class="text-xs text-slate-700 pt-6 border-t border-slate-900">
-                &copy; 2026 Attrivo Intelligence Private Limited. All rights reserved.
-            </div>
+      <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition">
+       <div class="bg-gradient-to-r from-emerald-50 to-teal-50 px-6 py-4 flex items-center justify-between border-b border-slate-100">
+        <h3 class="text-base font-extrabold text-slate-900">Install Dynamics</h3>
+        <span class="text-xs font-semibold text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">Total: 3,800 Installs</span>
+       </div>
+       <div class="p-6 space-y-5">
+        <div class="grid grid-cols-2 gap-4">
+         <div class="bg-slate-50 rounded-xl p-4">
+          <span class="text-xs text-slate-400 font-semibold uppercase tracking-wide block mb-1">Organic</span>
+          <span class="text-2xl font-extrabold text-slate-700">2,540</span>
+          <div class="mt-2 h-1.5 bg-slate-200 rounded-full"><div class="h-full bg-emerald-500 rounded-full" style="width:67%"></div></div>
+         </div>
+         <div class="bg-slate-50 rounded-xl p-4">
+          <span class="text-xs text-slate-400 font-semibold uppercase tracking-wide block mb-1">Non-Organic</span>
+          <span class="text-2xl font-extrabold text-slate-700">1,260</span>
+          <div class="mt-2 h-1.5 bg-slate-200 rounded-full"><div class="h-full bg-teal-400 rounded-full" style="width:33%"></div></div>
+         </div>
         </div>
-    </footer>
+        <p class="text-xs text-slate-500 leading-relaxed">Separates legitimate organic discovery markers from paid media performance installs smoothly.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
 
-    <!-- INTERACTIVE PAGE ROUTING SCRIPT -->
-    <script>
-        function switchPage(pageId) {
-            const sections = document.querySelectorAll('.tab-content');
-            sections.forEach(section => section.classList.remove('active'));
-            const targetSection = document.getElementById('page-' + pageId);
-            if (targetSection) {
-                targetSection.classList.add('active');
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+   <section id="usecases" class="py-20 bg-slate-50 border-t border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Platform Use Cases</h2>
+      <p class="text-lg text-slate-600">Explore how Attrivo powers critical modern marketing operations safely and robustly.</p>
+     </div>
 
-        // Cursor-tilt zoom effect on the hero video card
-        const tilt = document.querySelector('.video-tilt');
-        if (tilt) {
-            tilt.addEventListener('mousemove', (e) => {
-                const r = tilt.getBoundingClientRect();
-                const x = (e.clientX - r.left) / r.width;   // 0→1 left to right
-                const y = (e.clientY - r.top)  / r.height;  // 0→1 top to bottom
-                const rotY =  (x - 0.5) * 14;   // max ±7 deg
-                const rotX = -(y - 0.5) * 10;   // max ±5 deg
-                tilt.style.transition = 'transform 0.08s ease, box-shadow 0.08s ease';
-                tilt.style.transform  = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.03)`;
-                tilt.style.boxShadow  = `${-rotY * 1.5}px ${rotX * 1.5}px 40px rgba(37,99,235,0.18)`;
-            });
-            tilt.addEventListener('mouseleave', () => {
-                tilt.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
-                tilt.style.transform  = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)';
-                tilt.style.boxShadow  = '';
-            });
-        }
-    </script>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <div class="usecase-card bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition overflow-hidden">
+       <div class="bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 p-10 flex items-center justify-center h-44">
+        <div class="usecase-icon w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center text-4xl shadow-xl shadow-blue-200">🔗</div>
+       </div>
+       <div class="p-8 space-y-3">
+        <h3 class="text-xl font-bold text-slate-900">Multi-Touch Link Generation</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+         Build and Measure seamlessly. Generate deterministic lookback links and QR configurations handling custom media sources, re-engagement properties, and custom agency data rules automatically.
+        </p>
+       </div>
+      </div>
+
+      <div class="usecase-card bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition overflow-hidden">
+       <div class="bg-gradient-to-br from-red-50 via-orange-50 to-red-100 p-10 flex items-center justify-center h-44">
+        <div class="usecase-icon w-20 h-20 bg-red-500 rounded-2xl flex items-center justify-center text-4xl shadow-xl shadow-red-200">🛡️</div>
+       </div>
+       <div class="p-8 space-y-3">
+        <h3 class="text-xl font-bold text-slate-900">Mobile Ad Fraud Shielding</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+         Proactively flag toxic threat anomalies. Block highjacking parameters, device spoofing, server-side emulators, and bot vectors instantly before they consume your growth budgets.
+        </p>
+       </div>
+      </div>
+
+      <div class="usecase-card bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition overflow-hidden">
+       <div class="bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-100 p-10 flex items-center justify-center h-44">
+        <div class="usecase-icon w-20 h-20 bg-emerald-600 rounded-2xl flex items-center justify-center text-4xl shadow-xl shadow-emerald-200">☁️</div>
+       </div>
+       <div class="p-8 space-y-3">
+        <h3 class="text-xl font-bold text-slate-900">Unified Cloud Data Export</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+         Keep clean data close to your infrastructure. Stream raw log variables directly into target cloud frameworks like secure Amazon S3 objects seamlessly with dedicated folder prefix controls.
+        </p>
+       </div>
+      </div>
+
+      <div class="usecase-card bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition overflow-hidden">
+       <div class="bg-gradient-to-br from-violet-50 via-purple-50 to-violet-100 p-10 flex items-center justify-center h-44">
+        <div class="usecase-icon w-20 h-20 bg-violet-600 rounded-2xl flex items-center justify-center text-4xl shadow-xl shadow-violet-200">🔌</div>
+       </div>
+       <div class="p-8 space-y-3">
+        <h3 class="text-xl font-bold text-slate-900">SAN Integration Setup</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+         Accurately attribute paid traffic from Google and Meta. Configure auto-tagging, UTM parameters, and postback mappings so every campaign click reaches Attrivo with full attribution signals — eliminating misreported organic traffic.
+        </p>
+        <a href="/san-setup" class="inline-block mt-2 text-xs font-semibold text-violet-600 hover:text-violet-800 transition">View Setup Guide →</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+  </div>
+
+  <div id="page-terms" class="tab-content">
+   <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+     <div class="border-b border-slate-200 pb-4">
+      <h1 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Terms of Service</h1>
+      <p class="text-sm text-slate-500 mt-2">Effective 3rd April 2026</p>
+     </div>
+     <div class="prose prose-slate max-w-none space-y-6 text-slate-600 leading-relaxed">
+      <p>Welcome to Attrivo. Please read these Terms of Service ("Terms") carefully before using our software platform, attribution tracking APIs, and data dash spaces. By utilizing our utilities, you agree to comply with and be bound by these legal rules unconditionally.</p>
+      <h3 class="text-lg font-bold text-slate-900 mt-6">1. Acceptance & Access Scope</h3>
+      <p>Attrivo provisions marketing attribution pipelines, tracking links, and anti-fraud monitoring infrastructure. Access permissions are granted explicitly subject to full service-level subscription maintenance. Any malicious attempt to exploit endpoints, spoof package payloads, or run reverse-engineering protocols on our processing SDK configurations is explicitly prohibited.</p>
+      <h3 class="text-lg font-bold text-slate-900 mt-6">2. Infrastructure & API Fair Use</h3>
+      <p>Subscribers must ensure that administrative keys, lookback window settings, and security tokens are kept strictly confidential. We maintain absolute processing limits to preserve high availability. Any continuous query volume that triggers anomalous platform degradation will result in automated throttling or temporary pipeline suspension to safeguard neighboring tenants.</p>
+      <h3 class="text-lg font-bold text-slate-900 mt-6">3. System Limitations & Accuracy Liability</h3>
+      <p>Attrivo extracts multi-channel metrics, device signals, and fraud event patterns programmatically. While our engines strive for accurate classification across networks like Meta and Google Ads, we give no absolute warranty regarding error-free network delivery or real-time delivery guarantees from third-party SAN networks. Attrivo holds zero liability for direct or downstream ad-spend capital losses incurred through performance decisions.</p>
+      <h3 class="text-lg font-bold text-slate-900 mt-6">4. Termination Protocols</h3>
+      <p>Either party may terminate active agreements with standard written notice if substantial billing failures or policy violations occur. Upon termination, active smart tracking links will dissolve instantly, data ingestion loops will close, and remaining data assets can be exported to cloud systems by the client within specified grace terms.</p>
+     </div>
+    </div>
+   </section>
+  </div>
+
+  <div id="page-privacy" class="tab-content">
+   <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+     <div class="border-b border-slate-200 pb-4">
+      <h1 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Privacy Policy</h1>
+      <p class="text-sm text-slate-500 mt-2">Effective 3rd April 2026</p>
+     </div>
+     <div class="prose prose-slate max-w-none space-y-6 text-slate-600 leading-relaxed">
+      <p>At Attrivo, data integrity, transparency, and data sovereignty compliance are central to our design. This Privacy Policy outlines exactly how our software infrastructure parses, treats, and isolates information handled on behalf of enterprise partners across global systems.</p>
+      <h3 class="text-lg font-bold text-slate-900 mt-6">1. Log Types and Data Ingestion</h3>
+      <p>To compute precise marketing performance indicators, our infrastructure processes raw interaction triggers, click identifiers, session timestamps, device parameters, platform classes, and network routing metadata. This information is analyzed explicitly to identify conversion paths and isolate fraud threats.</p>
+      <h3 class="text-lg font-bold text-slate-900 mt-6">2. Third-Party SAN Connections & Tokens</h3>
+      <p>When administrators intentionally configure native integrations with partners like Facebook (Meta) or Google Ads, our system stores related authorization strings securely, including App IDs, OAuth tokens, and Decryption Keys. These credentials are used solely to fetch automated conversion logs and perform secure lookback matching cycles.</p>
+      <h3 class="text-lg font-bold text-slate-900 mt-6">3. Storage, Ownership & Raw S3 Export Controls</h3>
+      <p>Attrivo acts strictly as a data processor. All ingested transaction events remain your exclusive property. We offer native system functionalities to automatically bridge raw records into your custom warehouse systems or private cloud storage (such as Amazon S3 buckets) to let you maintain absolute physical data control.</p>
+      <h3 class="text-lg font-bold text-slate-900 mt-6">4. Data Governance Compliance</h3>
+      <p>Our processing modules are structurally isolated to align robustly with applicable local and international data protection laws, emphasizing minimized persistent profiling, restricted cross-border data leakage, and automated record-clearing timelines when requested by system admins.</p>
+     </div>
+    </div>
+   </section>
+  </div>
+
+  <div id="page-contact" class="tab-content">
+   <section class="py-20 bg-slate-50 flex-grow">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm text-center space-y-8">
+      <div class="space-y-3">
+       <span class="text-blue-600 text-4xl block">✉</span>
+       <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Connect with Our Strategy Team</h2>
+       <p class="text-slate-600 max-w-md mx-auto">
+        Want to optimize tracking setups, scale multi-touch pipelines, or schedule an advanced ad-fraud mitigation review? Let's connect.
+       </p>
+      </div>
+      <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 max-w-md mx-auto">
+       <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">Direct Inquiries & Support</span>
+       <a href="mailto:info@attrivo.in" class="text-xl sm:text-2xl font-black text-blue-600 hover:underline break-all">
+        info@attrivo.in
+       </a>
+      </div>
+      <div class="pt-6 border-t border-slate-100 text-xs text-slate-400 max-w-sm mx-auto">
+       We usually respond to architecture validation inquiries and enterprise proof-of-concept setup schedules within one business day.
+      </div>
+     </div>
+    </div>
+   </section>
+  </div>
+
+ </main>
+
+ <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 mt-auto">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+   <div class="flex justify-center cursor-pointer" onclick="switchPage('home')">
+    <img src="Attrivo.svg" alt="Attrivo Logo White" class="h-8 w-auto brightness-0 invert opacity-80">
+   </div>
+   <p class="text-sm max-w-md mx-auto">
+    Next-generation attribution & analytics solutions, built for growth marketers.</p>
+   <div class="flex flex-wrap justify-center gap-6 text-xs font-medium text-slate-500">
+    <button onclick="switchPage('home')" class="hover:text-slate-300 transition">Home</button>
+    <a href="/san-setup" class="hover:text-slate-300 transition">SAN Integration</a>
+    <a href="/terms" class="hover:text-slate-300 transition">Terms of Service</a>
+    <a href="/privacy" class="hover:text-slate-300 transition">Privacy Policy</a>
+    <a href="/contact" class="hover:text-slate-300 transition">Contact Us</a>
+   </div>
+   <div class="text-xs text-slate-700 pt-6 border-t border-slate-900">
+    &copy; 2026 Attrivo Intelligence Private Limited. All rights reserved.
+   </div>
+  </div>
+ </footer>
+
+ <script>
+  function switchPage(pageId) {
+   const sections = document.querySelectorAll('.tab-content');
+   sections.forEach(section => section.classList.remove('active'));
+   const targetSection = document.getElementById('page-' + pageId);
+   if (targetSection) {
+    targetSection.classList.add('active');
+   }
+   window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Cursor-tilt zoom effect on the hero video card
+  const tilt = document.querySelector('.video-tilt');
+  if (tilt) {
+   tilt.addEventListener('mousemove', (e) => {
+    const r = tilt.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width;   // 0→1 left to right
+    const y = (e.clientY - r.top)  / r.height;  // 0→1 top to bottom
+    const rotY =  (x - 0.5) * 14;   // max ±7 deg
+    const rotX = -(y - 0.5) * 10;   // max ±5 deg
+    tilt.style.transition = 'transform 0.08s ease, box-shadow 0.08s ease';
+    tilt.style.transform  = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.03)`;
+    tilt.style.boxShadow  = `${-rotY * 1.5}px ${rotX * 1.5}px 40px rgba(37,99,235,0.18)`;
+   });
+   tilt.addEventListener('mouseleave', () => {
+    tilt.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+    tilt.style.transform  = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)';
+    tilt.style.boxShadow  = '';
+   });
+  }
+ </script>
 
 </body>
 </html>
