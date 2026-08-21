@@ -1,0 +1,151 @@
+/* Attrivo shared premium system — used by home + san-setup */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Instrument+Sans:wght@500;600;700&display=swap');
+
+:root {
+  --ink: #0b1220;
+  --muted: #5b6b82;
+  --brand: #1d4ed8;
+  --brand-deep: #1e3a8a;
+  --brand-soft: #dbeafe;
+  --surface: #f4f7fb;
+  --surface-2: #ffffff;
+  --line: #e2e8f0;
+  --footer: #070b14;
+  --radius: 0.75rem;
+  --font: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --display: "Instrument Sans", "DM Sans", ui-sans-serif, sans-serif;
+  --mesh:
+    radial-gradient(900px 480px at 12% -10%, rgba(37, 99, 235, 0.18), transparent 55%),
+    radial-gradient(700px 420px at 92% 8%, rgba(14, 165, 233, 0.12), transparent 50%),
+    radial-gradient(600px 380px at 50% 100%, rgba(148, 163, 184, 0.14), transparent 55%),
+    linear-gradient(180deg, #f8fafc 0%, #eef3f9 45%, #f8fafc 100%);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--mesh);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+.site-header .inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.site-header img { height: 1.75rem; width: auto; display: block; }
+.site-nav {
+  display: none;
+  gap: 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.site-nav a { color: var(--muted); text-decoration: none; transition: color 0.2s ease; }
+.site-nav a:hover,
+.site-nav a.active { color: var(--brand); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand);
+  color: #fff !important;
+  padding: 0.7rem 1.25rem;
+  border-radius: 0.65rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.btn:hover { background: var(--brand-deep); transform: translateY(-1px); }
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--ink) !important;
+  border: 1px solid var(--line);
+}
+.btn-ghost:hover { background: #fff; }
+
+/* Footer */
+.site-footer {
+  background: var(--footer);
+  color: #94a3b8;
+  padding: 3rem 0;
+  margin-top: auto;
+  text-align: center;
+  border-top: 1px solid #0f172a;
+}
+.site-footer .inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  align-items: center;
+}
+.site-footer img {
+  height: 2rem;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+.site-footer .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.35rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.site-footer .links a { color: #64748b; text-decoration: none; }
+.site-footer .links a:hover { color: #cbd5e1; }
+.site-footer .copy {
+  font-size: 0.75rem;
+  color: #334155;
+  padding-top: 1.35rem;
+  border-top: 1px solid #111827;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .site-header .inner,
+  .site-footer .inner { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .site-nav { display: flex; }
+}
+@media (min-width: 1024px) {
+  .site-header .inner,
+  .site-footer .inner { padding-left: 2rem; padding-right: 2rem; }
+}
+
+/* Motion */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise { animation: riseIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.rise-delay-1 { animation-delay: 0.12s; }
+.rise-delay-2 { animation-delay: 0.24s; }
+.rise-delay-3 { animation-delay: 0.36s; }

@@ -1,0 +1,8 @@
+name = "attrivo-range-fix"
+main = "range-fix.js"
+compatibility_date = "2026-01-01"
+
+# After deploy, attach routes in Cloudflare:
+#   attrivo.in/*
+#   www.attrivo.in/*
+# And set DNS records for attrivo.in to Proxied (orange cloud).
