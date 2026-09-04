@@ -1,0 +1,81 @@
+name: Deploy Frontend to S3
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  AWS_REGION: ap-south-1
+
+jobs:
+  deploy-prod:
+    name: Deploy to Prod
+    runs-on: ubuntu-latest
+
+    env:
+      S3_BUCKET: attrivo-in-prod
+      CLOUDFRONT_DISTRIBUTION_ID: E3002WV4522P1L
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync to S3
+        run: |
+          aws s3 sync dist/ s3://$S3_BUCKET \
+            --delete \
+            --cache-control "public,max-age=31536000,immutable" \
+            --exclude "index.html" \
+            --exclude "robots.txt" \
+            --exclude "sitemap.xml" \
+            --region $AWS_REGION
+
+          aws s3 cp dist/index.html s3://$S3_BUCKET/index.html \
+            --cache-control "no-cache,no-store,must-revalidate" \
+            --region $AWS_REGION
+
+          if [ -f dist/robots.txt ]; then
+            aws s3 cp dist/robots.txt s3://$S3_BUCKET/robots.txt \
+              --content-type "text/plain; charset=utf-8" \
+              --cache-control "public,max-age=86400" \
+              --region $AWS_REGION
+          fi
+
+          if [ -f dist/sitemap.xml ]; then
+            aws s3 cp dist/sitemap.xml s3://$S3_BUCKET/sitemap.xml \
+              --content-type "application/xml; charset=utf-8" \
+              --cache-control "public,max-age=86400" \
+              --region $AWS_REGION
+          fi
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
+            --paths "/*"
