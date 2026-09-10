@@ -1,10 +1,12 @@
 <?php
 require __DIR__ . "/bootstrap.php";
+require __DIR__ . "/db.php";
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     forms_json(["ok" => false, "error" => "Method not allowed"], 405);
 }
 
+// Honeypot — pretend success.
 if (!empty($_POST["website"])) {
     forms_json(["ok" => true, "id" => "ignored"]);
 }
@@ -26,13 +28,11 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     forms_json(["ok" => false, "error" => "Please enter a valid email."], 400);
 }
 
+// Simple per-IP rate limit (12 / hour).
 $ip = (string) ($_SERVER["REMOTE_ADDR"] ?? "unknown");
 $rateFile = forms_data_dir() . "/rate-" . preg_replace("/[^a-zA-Z0-9._-]/", "_", $ip) . ".json";
 $now = time();
-$hits = [];
-if (is_file($rateFile)) {
-    $hits = json_decode((string) file_get_contents($rateFile), true) ?: [];
-}
+$hits = is_file($rateFile) ? (json_decode((string) file_get_contents($rateFile), true) ?: []) : [];
 $hits = array_values(array_filter($hits, fn($t) => is_int($t) && $t > $now - 3600));
 if (count($hits) >= 12) {
     forms_json(["ok" => false, "error" => "Too many submissions. Please try again later."], 429);
@@ -41,23 +41,27 @@ $hits[] = $now;
 file_put_contents($rateFile, json_encode($hits));
 
 $id = date("YmdHis") . "-" . bin2hex(random_bytes(4));
+
+// Optional résumé (careers).
 $resumeMeta = null;
+$resumeBase64 = "";
 if (!empty($_FILES["resume"]) && is_uploaded_file($_FILES["resume"]["tmp_name"])) {
     $name = (string) $_FILES["resume"]["name"];
     $size = (int) $_FILES["resume"]["size"];
     $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
-    $okExt = ["pdf", "doc", "docx"];
-    if ($size > 4 * 1024 * 1024 || !in_array($ext, $okExt, true)) {
+    if ($size > 4 * 1024 * 1024 || !in_array($ext, ["pdf", "doc", "docx"], true)) {
         forms_json(["ok" => false, "error" => "Resume must be PDF or Word, up to 4 MB."], 400);
     }
     $stored = $id . "." . $ext;
     if (!move_uploaded_file($_FILES["resume"]["tmp_name"], forms_uploads_dir() . "/" . $stored)) {
         forms_json(["ok" => false, "error" => "Could not store resume."], 500);
     }
-    $resumeMeta = ["name" => $name, "stored" => $stored];
+    $mime = (string) ($_FILES["resume"]["type"] ?: "application/octet-stream");
+    $resumeMeta = ["name" => $name, "stored" => $stored, "mime" => $mime];
+    $resumeBase64 = base64_encode((string) file_get_contents(forms_uploads_dir() . "/" . $stored));
 }
 
-$fields = [
+$fields = array_filter([
     "firstName" => $firstName,
     "lastName" => $lastName,
     "mobile" => $mobile,
@@ -68,39 +72,61 @@ $fields = [
     "industry" => trim((string) ($_POST["industry"] ?? "")),
     "role" => trim((string) ($_POST["role"] ?? "")),
     "linkedin" => trim((string) ($_POST["linkedin"] ?? "")),
-];
-$fields = array_filter($fields, fn($v) => $v !== "");
+], fn($v) => $v !== "");
 
+$iso = gmdate("c");
 $record = [
     "id" => $id,
-    "at" => gmdate("c"),
+    "at" => $iso,
+    "updatedAt" => $iso,
     "formKind" => $kind,
     "page" => substr(trim((string) ($_POST["page"] ?? "")), 0, 120),
     "section" => substr(trim((string) ($_POST["section"] ?? "")), 0, 80),
     "fields" => $fields,
     "resume" => $resumeMeta,
     "status" => "new",
-    "updatedAt" => gmdate("c"),
-    "history" => [["at" => gmdate("c"), "status" => "new"]],
+    "history" => [["at" => $iso, "status" => "new"]],
+    "ip" => $ip,
 ];
 
-$store = forms_data_dir() . "/submissions.jsonl";
-file_put_contents($store, json_encode($record) . PHP_EOL, FILE_APPEND | LOCK_EX);
+// 1. Primary store — MySQL (flat file when no DB configured).
+forms_store_submission($record);
 
+// 2. Mirror + email — Google Apps Script (Gmail send + Google Sheet row + Drive résumé).
 $config = forms_config();
-$notify = (string) ($config["notify_email"] ?? "");
-if ($notify !== "" && filter_var($notify, FILTER_VALIDATE_EMAIL)) {
-    $subject = "Attrivo website — " . $kind . " — " . $firstName . " " . $lastName;
-    $lines = [
-        "Form: " . $kind,
-        "Page: " . $record["page"],
-        "Section: " . $record["section"],
-        "",
-    ];
-    foreach ($fields as $key => $value) {
-        $lines[] = $key . ": " . $value;
+[$mailed, $mailErr] = forms_apps_script(array_filter([
+    "action" => "submit",
+    "id" => $id,
+    "formKind" => $kind,
+    "page" => $record["page"],
+    "section" => $record["section"],
+    "firstName" => $firstName,
+    "lastName" => $lastName,
+    "mobile" => $mobile,
+    "email" => $email,
+    "company" => $fields["company"] ?? "",
+    "message" => $fields["message"] ?? "",
+    "plan" => $fields["plan"] ?? "",
+    "industry" => $fields["industry"] ?? "",
+    "role" => $fields["role"] ?? "",
+    "linkedin" => $fields["linkedin"] ?? "",
+    "to" => (string) ($config["notify_email"] ?? "info@attrivo.in"),
+    "resumeName" => $resumeMeta["name"] ?? "",
+    "resumeMime" => $resumeMeta["mime"] ?? "",
+    "resumeBase64" => $resumeBase64,
+], fn($v) => $v !== "" && $v !== null));
+
+if (!$mailed) {
+    error_log("submit.php: apps script mirror failed for {$id}: {$mailErr}");
+    // Last-ditch local mail so a copy still reaches the inbox owner.
+    $notify = (string) ($config["notify_email"] ?? "");
+    if ($notify !== "" && filter_var($notify, FILTER_VALIDATE_EMAIL)) {
+        $lines = ["Form: {$kind}", "Page: {$record["page"]}", ""];
+        foreach ($fields as $k => $v) {
+            $lines[] = "{$k}: {$v}";
+        }
+        @mail($notify, "Attrivo website — {$kind} — {$firstName} {$lastName}", implode("\n", $lines), "Reply-To: {$email}");
     }
-    @mail($notify, $subject, implode("\n", $lines), "Reply-To: " . $email);
 }
 
-forms_json(["ok" => true, "id" => $id]);
+forms_json(["ok" => true, "id" => $id, "mailed" => $mailed]);
