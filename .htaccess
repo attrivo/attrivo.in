@@ -1,0 +1,23 @@
+RewriteEngine On
+RewriteBase /
+
+# Canonical host
+RewriteCond %{HTTP_HOST} ^www\.attrivo\.in$ [NC]
+RewriteRule ^ https://attrivo.in%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# PHP form endpoints (do not rewrite to the SPA)
+RewriteRule ^forms/ - [L]
+
+# Serve existing files/folders as-is
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Fallback
+RewriteRule ^ index.html [L]
