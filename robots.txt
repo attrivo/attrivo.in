@@ -5,5 +5,33 @@ Disallow: /admin/
 Disallow: /forms/
 Disallow: /forms
 
+User-Agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /forms/
+Disallow: /forms
+
+User-Agent: OAI-AdsBot
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /forms/
+Disallow: /forms
+
+User-Agent: GPTBot
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /forms/
+Disallow: /forms
+
+User-Agent: ChatGPT-User
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /forms/
+Disallow: /forms
+
 Host: https://attrivo.in
 Sitemap: https://attrivo.in/sitemap.xml
