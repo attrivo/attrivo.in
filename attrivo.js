@@ -227,7 +227,8 @@
           "App-Id": CONFIG.appId,
           "Authorization": CONFIG.apiKey
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(payload),
+        keepalive: true // survive navigation away from the page that fired this event (e.g. a tracked outbound link click)
       });
 
       if (!res.ok) {
